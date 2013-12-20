@@ -1,0 +1,31 @@
+<h1>Listing etherpads</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Name</th>
+      <th></th>
+      <th></th>
+      <th></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @etherpads.each do |etherpad| %>
+      <tr>
+        <td><%= etherpad.name %></td>
+        <td><%= link_to 'Show', etherpad %></td>
+        <td><%= link_to 'Edit', edit_etherpad_pat(etherpad) %></td>
+        <td><%= link_to 'Destroy', etherpad, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Etherpad', new_etherpad_path %></br>
+
+<% @app_groups.each do |app_group| %>
+  <%= app_group.name %>
+<% end %>

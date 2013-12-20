@@ -1,9 +1,12 @@
 class EtherpadsController < ApplicationController
+  before_action :set_etherpad, only: [:show, :edit, :update, :destroy]
+
   # /etherpad
   def index
     # Your users are probably members of some kind of groups.
     # These groups can be mapped to EtherpadLite Groups. List all the user's groups.
     @app_groups = current_user.groups
+    @etherpads = Etherpad.all
   end
 
   # /etherpad/groups/:id
@@ -33,4 +36,73 @@ class EtherpadsController < ApplicationController
     # Set the EtherpadLite session cookie. This will automatically be picked up by the jQuery plugin's iframe.
     cookies[:sessionID] = {:value => sess.id, :domain => "localhost"}
   end
+
+
+  # C/Pd stuff from groups_controller
+
+
+  # GET /groups/1
+  # GET /groups/1.json
+  def show
+  end
+
+  # GET /groups/new
+  def new
+    @etherpad = Etherpad.new
+  end
+
+  # GET /groups/1/edit
+  def edit
+  end
+
+  # POST /groups
+  # POST /groups.json
+  def create
+    @etherpad = Etherpad.new(etherpad_params)
+
+    respond_to do |format|
+      if @etherpad.save
+        format.html { redirect_to @etherpad, notice: 'Etherpad was successfully created.' }
+        format.json { render action: 'show', status: :created, location: @etherpad }
+      else
+        format.html { render action: 'new' }
+        format.json { render json: @etherpad.errors, status: :unprocessable_entity }
+      end
+    end
+  end
+
+  # PATCH/PUT /groups/1
+  # PATCH/PUT /groups/1.json
+  def update
+    respond_to do |format|
+      if @etherpad.update(group_params)
+        format.html { redirect_to @etherpad, notice: 'Etherpad was successfully updated.' }
+        format.json { head :no_content }
+      else
+        format.html { render action: 'edit' }
+        format.json { render json: @etherpad.errors, status: :unprocessable_entity }
+      end
+    end
+  end
+
+  # DELETE /groups/1
+  # DELETE /groups/1.json
+  def destroy
+    @etherpad.destroy
+    respond_to do |format|
+      format.html { redirect_to groups_url }
+      format.json { head :no_content }
+    end
+  end
+
+  private
+    # Use callbacks to share common setup or constraints between actions.
+    def set_etherpad
+      @etherpad = Etherpad.find(params[:id])
+    end
+
+    # Never trust parameters from the scary internet, only allow the white list through.
+    def group_params
+      params.require(:etherpad).permit(:name)
+    end
 end
