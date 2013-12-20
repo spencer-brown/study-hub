@@ -1,4 +1,4 @@
-class EtherpadController < ApplicationController
+class EtherpadsController < ApplicationController
   # /etherpad
   def index
     # Your users are probably members of some kind of groups.
