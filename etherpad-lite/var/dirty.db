@@ -273,3 +273,18 @@
 {"key":"globalAuthor:a.f7LZbgF4MOjsjN6d","val":{"colorId":3,"name":null,"timestamp":1387508033532}}
 {"key":"token2author:undefined","val":"a.f7LZbgF4MOjsjN6d"}
 {"key":"sessionstorage:rcmJwL5Yd47eHjfzfDp/Karz","val":{"cookie":{"path":"/","_expires":null,"originalMaxAge":null,"httpOnly":true}}}
+{"key":"sessionstorage:mXzu15D4WqaEA+5NQ42Ur98y","val":{"cookie":{"path":"/","_expires":null,"originalMaxAge":null,"httpOnly":true}}}
+{"key":"sessionstorage:mXzu15D4WqaEA+5NQ42Ur98y","val":{"cookie":{"path":"/","_expires":null,"originalMaxAge":null,"httpOnly":true}}}
+{"key":"sessionstorage:mXzu15D4WqaEA+5NQ42Ur98y","val":{"cookie":{"path":"/","_expires":null,"originalMaxAge":null,"httpOnly":true}}}
+{"key":"sessionstorage:mXzu15D4WqaEA+5NQ42Ur98y","val":{"cookie":{"path":"/","_expires":null,"originalMaxAge":null,"httpOnly":true}}}
+{"key":"sessionstorage:mXzu15D4WqaEA+5NQ42Ur98y","val":{"cookie":{"path":"/","_expires":null,"originalMaxAge":null,"httpOnly":true}}}
+{"key":"sessionstorage:mXzu15D4WqaEA+5NQ42Ur98y","val":{"cookie":{"path":"/","_expires":null,"originalMaxAge":null,"httpOnly":true}}}
+{"key":"globalAuthor:a.RqXJ4vGv7pEtrCFs","val":{"colorId":"#ffe38f","name":"unnamed","timestamp":1387510491951,"padIDs":{"me":1}}}
+{"key":"pad2readonly:kirby","val":"r.UhJ0TXdsshrykxg6"}
+{"key":"readonly2pad:r.UhJ0TXdsshrykxg6","val":"kirby"}
+{"key":"pad:kirby:revs:0","val":{"changeset":"Z:1>6b|5+6b$Welcome to Etherpad!\n\nThis pad text is synchronized as you type, so that everyone viewing this page sees the same text. This allows you to collaborate seamlessly on documents!\n\nGet involved with Etherpad at http://etherpad.org\n","meta":{"author":"","timestamp":1387510491956,"atext":{"text":"Welcome to Etherpad!\n\nThis pad text is synchronized as you type, so that everyone viewing this page sees the same text. This allows you to collaborate seamlessly on documents!\n\nGet involved with Etherpad at http://etherpad.org\n\n","attribs":"|6+6c"}}}}
+{"key":"pad:kirby","val":{"atext":{"text":"Welcome to Etherpad!\n\nThis pad text is synchronized as you type, so that everyone viewing this page sees the same text. This allows you to collaborate seamlessly on documents!\n\nGet involved with Etherpad at http://etherpad.org\n\n","attribs":"|6+6c"},"pool":{"numToAttrib":{},"nextNum":0},"head":0,"chatHead":-1,"publicStatus":false,"passwordHash":null,"savedRevisions":[]}}
+{"key":"globalAuthor:a.RqXJ4vGv7pEtrCFs","val":{"colorId":"#ffe38f","name":"unnamed","timestamp":1387510491952,"padIDs":{"me":1}}}
+{"key":"globalAuthor:a.RqXJ4vGv7pEtrCFs","val":{"colorId":"#ffe38f","name":"unnamed","timestamp":1387510491953,"padIDs":{"me":1}}}
+{"key":"sessionstorage:mXzu15D4WqaEA+5NQ42Ur98y","val":{"cookie":{"path":"/","_expires":null,"originalMaxAge":null,"httpOnly":true}}}
+{"key":"sessionstorage:mXzu15D4WqaEA+5NQ42Ur98y","val":{"cookie":{"path":"/","_expires":null,"originalMaxAge":null,"httpOnly":true}}}
