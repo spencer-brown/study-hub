@@ -12,7 +12,7 @@
 //
 //= require jquery
 //= require jquery_ujs
+//= require etherpad
 //= require bootstrap
 //= require turbolinks
-//= require etherpad
 //= require_tree .
