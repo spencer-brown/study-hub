@@ -1,4 +1,9 @@
 <p id="notice"><%= notice %></p>
 
+<p>
+  <strong>Name:</strong>
+  <%= @etherpad.name %>
+</p>
+
 <%= link_to 'Edit', edit_etherpad_path(@etherpad) %> |
 <%= link_to 'Back', etherpads_path %>

@@ -1,17 +1,31 @@
 class EtherpadsController < ApplicationController
   before_action :set_etherpad, only: [:show, :edit, :update, :destroy]
-
+  Api_path = '/Users/spencerbrown/Documents/Projects/studypool/etherpad-lite/APIKEY.txt'
   # /etherpad
   def index
     # Your users are probably members of some kind of groups.
     # These groups can be mapped to EtherpadLite Groups. List all the user's groups.
     @app_groups = current_user.groups
     @etherpads = Etherpad.all
+
+
+    # copying from the other methods to test stuff out
+
+    ether = EtherpadLite.connect(9001, File.new(Api_path))
+    
+    # @app_group = YourAppGroup.find(params[:id])
+    # replace the line above, not sure how it works
+    @app_group = Group.first
+    # Map your app's group to an EtherpadLite Group, and list all its pads
+    group = ether.group("my_app_group_#{@app_group.id}")
+    @pads = group.pads
+    @pad = @group.pad(params[:ep_pad_name])
+
   end
 
   # /etherpad/groups/:id
   def group
-    ether = EtherpadLite.connect(9001, File.new('../../etherpad-lite/APIKEY.txt'))
+    ether = EtherpadLite.connect(9001, File.new(Api_path))
     @app_group = YourAppGroup.find(params[:id])
     # Map your app's group to an EtherpadLite Group, and list all its pads
     group = ether.group("my_app_group_#{@app_group.id}")
@@ -20,7 +34,7 @@ class EtherpadsController < ApplicationController
 
   # /etherpad/pads/:ep_group_id/:ep_pad_name
   def pad
-    ether = EtherpadLite.connect(9001, File.new('../../etherpad-lite/APIKEY.txt'))
+    ether = EtherpadLite.connect(9001, File.new(Api_path))
     # Get the EtherpadLite Group and Pad by id
     @group = ether.get_group(params[:ep_group_id])
     @pad = @group.pad(params[:ep_pad_name])
@@ -38,7 +52,7 @@ class EtherpadsController < ApplicationController
   end
 
 
-  # C/Pd stuff from groups_controller
+  # C/Pd stuff from groups_controller, automatically generated with scaffold
 
 
   # GET /etherpads/1
@@ -103,6 +117,6 @@ class EtherpadsController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def etherpad_params
-      params.require(:etherpad).permit(:name)
+      params.require(:etherpad).permit(:group, :name)
     end
 end
