@@ -1,0 +1,25 @@
+<h1>Listing etherpads</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th></th>
+      <th></th>
+      <th></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @etherpads.each do |etherpad| %>
+      <tr>
+        <td><%= link_to 'Show', etherpad %></td>
+        <td><%= link_to 'Edit', edit_etherpad_path(etherpad) %></td>
+        <td><%= link_to 'Destroy', etherpad, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Etherpad', new_etherpad_path %>
