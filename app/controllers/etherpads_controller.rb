@@ -41,22 +41,22 @@ class EtherpadsController < ApplicationController
   # C/Pd stuff from groups_controller
 
 
-  # GET /groups/1
-  # GET /groups/1.json
+  # GET /etherpads/1
+  # GET /etherpads/1.json
   def show
   end
 
-  # GET /groups/new
+  # GET /etherpads/new
   def new
     @etherpad = Etherpad.new
   end
 
-  # GET /groups/1/edit
+  # GET /etherpads/1/edit
   def edit
   end
 
-  # POST /groups
-  # POST /groups.json
+  # POST /etherpads
+  # POST /etherpads.json
   def create
     @etherpad = Etherpad.new(etherpad_params)
 
@@ -71,11 +71,11 @@ class EtherpadsController < ApplicationController
     end
   end
 
-  # PATCH/PUT /groups/1
-  # PATCH/PUT /groups/1.json
+  # PATCH/PUT /etherpads/1
+  # PATCH/PUT /etherpads/1.json
   def update
     respond_to do |format|
-      if @etherpad.update(group_params)
+      if @etherpad.update(etherpad_params)
         format.html { redirect_to @etherpad, notice: 'Etherpad was successfully updated.' }
         format.json { head :no_content }
       else
@@ -85,12 +85,12 @@ class EtherpadsController < ApplicationController
     end
   end
 
-  # DELETE /groups/1
-  # DELETE /groups/1.json
+  # DELETE /etherpads/1
+  # DELETE /etherpads/1.json
   def destroy
     @etherpad.destroy
     respond_to do |format|
-      format.html { redirect_to groups_url }
+      format.html { redirect_to etherpads_url }
       format.json { head :no_content }
     end
   end
@@ -102,7 +102,7 @@ class EtherpadsController < ApplicationController
     end
 
     # Never trust parameters from the scary internet, only allow the white list through.
-    def group_params
+    def etherpad_params
       params.require(:etherpad).permit(:name)
     end
 end

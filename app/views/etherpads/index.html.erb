@@ -15,7 +15,7 @@
       <tr>
         <td><%= etherpad.name %></td>
         <td><%= link_to 'Show', etherpad %></td>
-        <td><%= link_to 'Edit', edit_etherpad_pat(etherpad) %></td>
+        <td><%= link_to 'Edit', edit_etherpad_path(etherpad) %></td>
         <td><%= link_to 'Destroy', etherpad, method: :delete, data: { confirm: 'Are you sure?' } %></td>
       </tr>
     <% end %>
