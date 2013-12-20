@@ -3,7 +3,7 @@ class EtherpadController < ApplicationController
   def index
     # Your users are probably members of some kind of groups.
     # These groups can be mapped to EtherpadLite Groups. List all the user's groups.
-    # @app_groups = current_user.groups
+    @app_groups = current_user.groups
   end
 
   # /etherpad/groups/:id
