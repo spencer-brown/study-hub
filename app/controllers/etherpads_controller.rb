@@ -24,11 +24,12 @@ class EtherpadsController < ApplicationController
     # using the lower-level client allows me to use the api methods from the EPL docs
     client = ether.client
 
-    client.getText(padID: 'testpad2')
-    client.listAllPads()
     client.getText(padID: "kirby")
     client.setText(padID: "my_first_etherpad_lite_pad", text: "asdfasdfO")
     client.getText(padID: "my_first_etherpad_lite_pad")
+    client.setText(padID: "testpad2", text: "this is testpad2")
+    client.getText(padID: "testpad2")
+    client.listAllPads()
 
 
   end
