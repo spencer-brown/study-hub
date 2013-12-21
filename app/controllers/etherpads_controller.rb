@@ -19,7 +19,8 @@ class EtherpadsController < ApplicationController
     # Map your app's group to an EtherpadLite Group, and list all its pads
     group = ether.group("my_app_group_#{@app_group.id}")
     @pads = group.pads
-    @pad = @group.pad(params[:ep_pad_name])
+    @pad = ether.createGroupPad(group, 'TestPad')
+
 
   end
 
