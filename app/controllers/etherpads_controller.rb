@@ -1,6 +1,6 @@
 class EtherpadsController < ApplicationController
   before_action :set_etherpad, only: [:show, :edit, :update, :destroy]
-  Api_path = '/Users/spencerbrown/Documents/Projects/studypool/etherpad-lite/APIKEY.txt'
+  Api_path = '/etherpad-lite/APIKEY.txt'
   # /etherpad
   def index
     # Your users are probably members of some kind of groups.
