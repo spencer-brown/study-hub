@@ -16,17 +16,21 @@ class EtherpadsController < ApplicationController
     # @app_group = YourAppGroup.find(params[:id])
     # replace the line above, not sure how it works
     @app_group = Group.first
+
     # Map your app's group to an EtherpadLite Group, and list all its pads
     group = ether.group("my_app_group_#{@app_group.id}")
     @pads = group.pads
-        
-    # doesn't work --> createGroupPad not defined
-    # @pad = ether.createGroupPad(group, 'TestPad')
 
+    # using the lower-level client allows me to use the api methods from the EPL docs
     client = ether.client
-    # pad = client.createPad(padID: 'testpad1')
+
+    client.getText(padID: 'testpad2')
     client.listAllPads()
     client.getText(padID: "kirby")
+    client.setText(padID: "my_first_etherpad_lite_pad", text: "asdfasdfO")
+    client.getText(padID: "my_first_etherpad_lite_pad")
+
+
   end
 
   # /etherpad/groups/:id
