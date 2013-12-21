@@ -1,8 +1,9 @@
 class EtherpadsController < ApplicationController
   before_action :set_etherpad, only: [:show, :edit, :update, :destroy]
-  Api_path = '/Users/spencerbrown/Documents/Projects/studypool/etherpad-lite/APIKEY.txt'
+  # for development, use:
+  # Api_path = '/Users/spencerbrown/Documents/Projects/studypool/etherpad-lite/APIKEY.txt'
   # for heroku, use:
-  #   Api_path = 'etherpad-lite/APIKEY.txt'
+  Api_path = 'etherpad-lite/APIKEY.txt'
 
   # /etherpad
   def index
