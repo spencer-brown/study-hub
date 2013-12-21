@@ -1,6 +1,9 @@
 class EtherpadsController < ApplicationController
   before_action :set_etherpad, only: [:show, :edit, :update, :destroy]
-  Api_path = 'etherpad-lite/APIKEY.txt'
+  Api_path = '/Users/spencerbrown/Documents/Projects/studypool/etherpad-lite/APIKEY.txt'
+  # for heroku, use:
+  #   Api_path = 'etherpad-lite/APIKEY.txt'
+
   # /etherpad
   def index
     # Your users are probably members of some kind of groups.
@@ -15,11 +18,15 @@ class EtherpadsController < ApplicationController
     
     # @app_group = YourAppGroup.find(params[:id])
     # replace the line above, not sure how it works
-    @app_group = Group.first
+    
+    # COMMENT TEMPORARILY FOR HEROKU PUSH
+    # --------------------------------------
+    # @app_group = Group.first
 
     # Map your app's group to an EtherpadLite Group, and list all its pads
-    group = ether.group("my_app_group_#{@app_group.id}")
-    @pads = group.pads
+    # group = ether.group("my_app_group_#{@app_group.id}")
+    # @pads = group.pads
+    # --------------------------------------
 
     # using the lower-level client allows me to use the api methods from the EPL docs
     client = ether.client
