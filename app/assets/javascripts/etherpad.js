@@ -2,8 +2,8 @@
 
   $.fn.pad = function( options ) {
     var settings = {
-      'host'              : 'http://0.0.0.0:3000',
-      'baseUrl'           : '/p/',
+      'host'              : 'http://0.0.0.0:9001/',
+      'baseUrl'           : '/etherpads',
       'showControls'      : false,
       'showChat'          : false,
       'showLineNumbers'   : false,
