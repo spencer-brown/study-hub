@@ -47,7 +47,8 @@ class EtherpadsController < ApplicationController
   # /etherpad/groups/:id
   def group
     ether = EtherpadLite.connect(9001, File.new(Api_path))
-    @app_group = YourAppGroup.find(params[:id])
+    # YourAppGroup --> Group
+    @app_group = Group.find(params[:id])
     # Map your app's group to an EtherpadLite Group, and list all its pads
     group = ether.group("my_app_group_#{@app_group.id}")
     @pads = group.pads

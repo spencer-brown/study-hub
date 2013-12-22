@@ -15,5 +15,6 @@
 /log/*.log
 /tmp
 .DS_Store
+etherpad-lite/.DS_Store
 etherpad-lite/var/*
 Ideas.txt
