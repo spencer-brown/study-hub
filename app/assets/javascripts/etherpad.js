@@ -9,7 +9,7 @@
       'showLineNumbers'   : true,
       'userName'          : 'unnamed',
       'useMonospaceFont'  : false,
-      'noColors'          : false,
+      'noColors'          : true,
       'userColor'         : false,
       'hideQRCode'        : false,
       'alwaysShowChat'    : false,
