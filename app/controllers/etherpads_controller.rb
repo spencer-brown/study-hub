@@ -1,9 +1,9 @@
 class EtherpadsController < ApplicationController
   before_action :set_etherpad, only: [:show, :edit, :update, :destroy]
   # for development, use:
-  # Api_path = '/Users/spencerbrown/Documents/Projects/studypool/etherpad-lite/APIKEY.txt'
+  Api_path = '/Users/spencerbrown/Documents/Projects/epl/APIKEY.txt'
   # for heroku, use:
-  Api_path = 'etherpad-lite/APIKEY.txt'
+  # Api_path = 'etherpad-lite/APIKEY.txt'
 
   # /etherpad
   def index
@@ -15,7 +15,7 @@ class EtherpadsController < ApplicationController
 
     # copying from the other methods to test stuff out
 
-    ether = EtherpadLite.connect(9001, File.new(Api_path))
+    # ether = EtherpadLite.connect(9001, File.new(Api_path))
     
     # @app_group = YourAppGroup.find(params[:id])
     # replace the line above, not sure how it works
@@ -85,6 +85,11 @@ class EtherpadsController < ApplicationController
   # GET /etherpads/new
   def new
     @etherpad = Etherpad.new
+    
+
+    ether = EtherpadLite.connect("epl-spencerbrown.rhcloud.com", File.new(Api_path))
+    client = ether.client
+    client.setText(padID: "testpad2", text: "this is testpad2!!!!!!!")
   end
 
   # GET /etherpads/1/edit
