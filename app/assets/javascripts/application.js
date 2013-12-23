@@ -13,8 +13,6 @@
 //= require jquery
 //= require jquery_ujs
 //= require etherpad
-
-//= require foundation
+//= require bootstrap
+//= require turbolinks
 //= require_tree .
-
-$(function(){ $(document).foundation(); });
