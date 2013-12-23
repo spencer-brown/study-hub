@@ -2,11 +2,11 @@
 
   $.fn.pad = function( options ) {
     var settings = {
-      'host'              : 'http://www.epl-spencerbrown.rhcloud.com',
+      'host'              : 'http://epl-spencerbrown.rhcloud.com',
       'baseUrl'           : '/p/',
-      'showControls'      : false,
-      'showChat'          : false,
-      'showLineNumbers'   : false,
+      'showControls'      : true,
+      'showChat'          : true,
+      'showLineNumbers'   : true,
       'userName'          : 'unnamed',
       'useMonospaceFont'  : false,
       'noColors'          : false,
@@ -14,9 +14,9 @@
       'hideQRCode'        : false,
       'alwaysShowChat'    : false,
       'width'             : 100,
-      'height'            : 100,
-      'border'            : 0,
-      'borderStyle'       : 'solid',
+      'height'            : 1000,
+      'border'            : 3,
+      'borderStyle'       : 'groove',
       'toggleTextOn'      : 'Disable Rich-text',
       'toggleTextOff'     : 'Enable Rich-text'
     };
