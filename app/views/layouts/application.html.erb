@@ -8,9 +8,8 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 </head>
 <body>
-
 	<%= render 'layouts/header' %>
-	<div class="container">
+	<div class="container body-padding">
 		<%= yield %>
 		<% flash.each do |name, msg| %>
 			<%= content_tag(:div, msg, class: "alert alert-info") %>
