@@ -1,5 +1,7 @@
 class EtherpadsController < ApplicationController
   before_action :set_etherpad, only: [:show, :edit, :update, :destroy]
+  before_filter :prepare_groups
+
   # for development, use:
   # Api_path = '/Users/spencerbrown/Documents/Projects/epl/APIKEY.txt'
   # for heroku, use:
@@ -152,6 +154,11 @@ class EtherpadsController < ApplicationController
   end
 
   private
+     # add the @groups = Group.all to the before action so avail for all actions
+    def prepare_groups
+      @groups = Group.all
+    end
+
     # Use callbacks to share common setup or constraints between actions.
     def set_etherpad
       @etherpad = Etherpad.find(params[:id])
@@ -159,6 +166,6 @@ class EtherpadsController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def etherpad_params
-      params.require(:etherpad).permit(:group, :name)
+      params.require(:etherpad).permit(:group, :group_id, :name)
     end
 end

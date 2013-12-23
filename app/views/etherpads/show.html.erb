@@ -2,7 +2,11 @@
 
 <p>
   <strong>Name:</strong>
-  <%= @etherpad.name %>
+  <%= @etherpad.name %><br>
+</p>
+<p>
+	<strong>Group:</strong>
+	<%= @etherpad.group.name %>
 </p>
 
 <%= link_to 'Edit', edit_etherpad_path(@etherpad) %> |
