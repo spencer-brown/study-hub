@@ -49,7 +49,7 @@
           iFrameLink = iFrameLink +'" style="border:'+settings.border;
           iFrameLink = iFrameLink +'; border-style:'+settings.borderStyle;
           iFrameLink = iFrameLink +';" width="'+ '100%';//settings.width;
-          iFrameLink = iFrameLink +'" height="'+ settings.height; 
+          iFrameLink = iFrameLink +'" height="'+ settings.height;
           iFrameLink = iFrameLink +'"></iframe>';
       
       
@@ -69,7 +69,7 @@
           .after($iFrameLink)
         ;
       }
-      else {      
+      else {
         $self.html(iFrameLink);
       }
     }
