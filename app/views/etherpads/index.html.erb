@@ -26,8 +26,10 @@
 
 <%= link_to 'New Etherpad', new_etherpad_path %></br>
 
-<% @app_groups.each do |app_group| %>
-  <%= app_group.name %>
+<% if current_user %>
+  <% @app_groups.each do |app_group| %>
+    <%= app_group.name %>
+  <% end %>
 <% end %>
 
 <!-- <script type="text/javascript">
