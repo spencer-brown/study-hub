@@ -2,7 +2,7 @@
 
   $.fn.pad = function( options ) {
     var settings = {
-      'host'              : 'http://0.0.0.0:9001/',
+      'host'              : 'http://www.epl-spencerbrown.rhcloud.com',
       'baseUrl'           : 'p/',
       'showControls'      : false,
       'showChat'          : false,
