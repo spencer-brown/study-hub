@@ -5,5 +5,12 @@
   <%= @group.name %>
 </p>
 
+<p>
+	<strong>Etherpads:</strong>
+	<% @group.etherpads.each do |etherpad| %>
+		<%= etherpad.name %>
+	<% end %>
+</p>
+
 <%= link_to 'Edit', edit_group_path(@group) %> |
 <%= link_to 'Back', groups_path %>
