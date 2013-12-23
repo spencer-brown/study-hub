@@ -81,15 +81,30 @@ class EtherpadsController < ApplicationController
   # GET /etherpads/1.json
   def show
   end
+  
+  def setpadtext
+    @etherpad = Etherpad.new
+
+  # this works!
+    ether = EtherpadLite.connect("epl-spencerbrown.rhcloud.com", File.new(Api_path))
+    client = ether.client
+    client.setText(padID: "testpad2", text: "text set with setpadtext!")
+  end
+
+  def newpad
+    ether = EtherpadLite.connect("epl-spencerbrown.rhcloud.com", File.new(Api_path))
+    client = ether.client
+    client.createPad("testpad3")
+  end
 
   # GET /etherpads/new
   def new
     @etherpad = Etherpad.new
     
-
-    ether = EtherpadLite.connect("epl-spencerbrown.rhcloud.com", File.new(Api_path))
-    client = ether.client
-    client.setText(padID: "testpad2", text: "this is testpad2!!!!!!!")
+    # this works!
+    # ether = EtherpadLite.connect("epl-spencerbrown.rhcloud.com", File.new(Api_path))
+    # client = ether.client
+    # client.setText(padID: "testpad2", text: "this is testpad2!!!!!!!")
   end
 
   # GET /etherpads/1/edit

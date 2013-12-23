@@ -7,3 +7,9 @@
 
 <%= link_to 'Edit', edit_etherpad_path(@etherpad) %> |
 <%= link_to 'Back', etherpads_path %>
+
+<div id="examplePadBasic"></div>
+<script type="text/javascript">
+	var padname = "<%= @etherpad.name %>";
+	$('#examplePadBasic').pad({'padId': padname}); // sets the pad id and puts the pad in the div
+</script>
