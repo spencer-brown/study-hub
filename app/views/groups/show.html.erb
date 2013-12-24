@@ -8,7 +8,11 @@
 <p>
 	<strong>Etherpads:</strong>
 	<% @group.etherpads.each do |etherpad| %>
-		<p><%= etherpad.name %></p>
+		<p>
+      <%= link_to etherpad do %>
+        <%= etherpad.name %>
+      <% end %>
+    </p>
 	<% end %>
 </p>
 
