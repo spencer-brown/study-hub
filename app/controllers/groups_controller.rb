@@ -23,11 +23,13 @@ class GroupsController < ApplicationController
 
   def apply
     @group.users << current_user
+    render nothing: true
   end
 
   def remove
     @user = current_user
     @user.groups.delete(@group)
+    render nothing: true
   end
 
   # POST /groups

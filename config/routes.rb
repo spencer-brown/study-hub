@@ -4,8 +4,8 @@ Studypool::Application.routes.draw do
   resources :etherpads
   resources :groups do
       # allows 'apply' button to add current user to a class
-      put 'apply', on: :member
-      put 'remove', on: :member
+      get 'apply', on: :member
+      get 'remove', on: :member
   end
 
   # The priority is based upon order of creation: first created -> highest priority.

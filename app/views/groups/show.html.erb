@@ -15,8 +15,8 @@
 <%= link_to 'Edit', edit_group_path(@group) %> |
 <%= link_to 'Back', groups_path %>
 
-<%= link_to "Apply", apply_group_path(@group), remote: true, method: :put, class: "btn btn-large btn-primary" %>
-<%= link_to "Remove", remove_group_path(@group), remote: true, method: :put, class: "btn btn-large btn-primary" %>
+<%= link_to "Apply", apply_group_path(@group), remote: true, method: :get, class: "btn btn-large btn-primary" %>
+<%= link_to "Remove", remove_group_path(@group), remote: true, method: :get, class: "btn btn-large btn-primary" %>
 
 
 <button class="btn btn-primary Add">Add</button>
@@ -29,10 +29,10 @@
     $this.toggleClass('Add');
     if($this.hasClass('Add')){
       $this.text('Add');
-      $.ajax({type: "PUT", url: remove});
+      $.ajax({type: "GET", url: remove});
     } else {
       $this.text('Remove');
-      $.ajax({type: "PUT", url: apply});
+      $.ajax({type: "GET", url: apply});
     }
   });
 </script>
