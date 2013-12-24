@@ -1,18 +1,25 @@
-<p id="notice"><%= notice %></p>
+<div class="container">
+	<div class="row">
+		<h2><%= link_to 'Back', etherpads_path, class: "btn btn-default" %>
+		<%= @etherpad.name %> Study Pad
+	  <small><%= @etherpad.group.name %></small></h2>
+	</div>
+	<div class="row">
+		<div id="examplePadBasic"></div>
+	</div>
+</div>
 
-<p>
-  <strong>Name:</strong>
-  <%= @etherpad.name %><br>
-</p>
-<p>
-	<strong>Group:</strong>
-	<%= @etherpad.group.name %>
-</p>
+<%= link_to 'Edit', edit_etherpad_path(@etherpad), class: "btn btn-default" %>
 
-<%= link_to 'Edit', edit_etherpad_path(@etherpad) %> |
-<%= link_to 'Back', etherpads_path %>
 
-<div id="examplePadBasic"></div>
+
+
+
+
+
+
+
+
 <script type="text/javascript">
 	var padname = "<%= @etherpad.name %>";
 	$('#examplePadBasic').pad({'padId': padname}); // sets the pad id and puts the pad in the div
