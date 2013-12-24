@@ -162,6 +162,7 @@ class EtherpadsController < ApplicationController
     # Use callbacks to share common setup or constraints between actions.
     def set_etherpad
       @etherpad = Etherpad.find(params[:id])
+      @group = @etherpad.group
     end
 
     # Never trust parameters from the scary internet, only allow the white list through.

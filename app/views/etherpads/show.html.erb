@@ -1,28 +1,31 @@
 <div class="container">
 	<div class="row">
-		<h2>
-			<%= link_to etherpads_path, class: "btn btn-default" do %>
-				<i class="fa fa-arrow-left"></i>Back
-			<% end %>
-			<%= @etherpad.name %> Study Pad
-		  <small><%= @etherpad.group.name %></small>
-		</h2>
+		<div class="col-md-9">
+			<h2>
+				<%= @etherpad.name %> Study Pad
+			  <small><%= @etherpad.group.name %></small>
+			</h2>
+		</div>
+		<div class="col-md-3 text-right">
+				<%= link_to @group, class: "btn btn-default" do %>
+					<i class="fa fa-arrow-left"></i> Return to <%= @etherpad.group.name %>'s Study Pads
+				<% end %>
+		</div>
 	</div>
+
 	<div class="row">
 		<div id="examplePadBasic"></div>
 	</div>
 </div>
 
+
+
+
+
+
+
+
 <%= link_to 'Edit', edit_etherpad_path(@etherpad), class: "btn btn-default" %>
-
-
-
-
-
-
-
-
-
 
 <script type="text/javascript">
 	var padname = "<%= @etherpad.name %>";
