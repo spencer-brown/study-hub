@@ -16,3 +16,4 @@
 <%= link_to 'Back', groups_path %>
 
 <%= link_to "Apply", apply_group_path(@group), remote: true, method: :put, class: "btn btn-large btn-primary" %>
+<%= link_to "Remove", remove_group_path(@group), remote: true, method: :put, class: "btn btn-large btn-primary" %>
