@@ -10,6 +10,7 @@ gem 'jbuilder', '~> 1.2'
 gem "bootstrap-sass", "~> 3.0.3.0"
 gem "devise", "~> 3.2.2"
 gem "etherpad-lite", "~> 0.3.0"
+gem "font-awesome-sass", "~> 4.0.2"
 
 group :development, :test do
 	gem 'sqlite3'
