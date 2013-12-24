@@ -21,6 +21,9 @@
 
 <button class="btn btn-primary Add">Add</button>
 
+
+<button class="<%= @determine ? 'Remove' : 'Add' %>"><%= @determine ? 'Remove' : 'Add' %></button>
+
 <script>
   $('.Add').click(function(){
     var $this = $(this);
@@ -33,6 +36,20 @@
     } else {
       $this.text('Remove');
       $.ajax({type: "GET", url: apply});
+    }
+  });
+
+    $('.Remove').click(function(){
+    var $this = $(this);
+    var apply = "<%= apply_group_path(@group) %>"
+    var remove = "<%= remove_group_path(@group) %>"
+    $this.toggleClass('Add');
+    if($this.hasClass('Add')){
+      $this.text('Add');
+      $.ajax({type: "GET", url: apply});
+    } else {
+      $this.text('Remove');
+      $.ajax({type: "GET", url: remove});
     }
   });
 </script>
