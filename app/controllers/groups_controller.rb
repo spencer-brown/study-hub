@@ -1,5 +1,5 @@
 class GroupsController < ApplicationController
-  before_action :set_group, only: [:show, :edit, :update, :destroy]
+  before_action :set_group, only: [:apply, :show, :edit, :update, :destroy]
 
   # GET /groups
   # GET /groups.json
@@ -19,6 +19,14 @@ class GroupsController < ApplicationController
 
   # GET /groups/1/edit
   def edit
+  end
+
+  def apply
+    @group.users << current_user
+    group.save
+
+    # @groupgroup = current_user.groups.create(group: @group, role: 'member')
+    # respond_with @groupgroup
   end
 
   # POST /groups

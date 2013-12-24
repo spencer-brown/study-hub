@@ -2,7 +2,10 @@ Studypool::Application.routes.draw do
   root "pages#home"
   devise_for :users
   resources :etherpads
-  resources :groups
+  resources :groups do
+      put 'apply', on: :member
+  end
+
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 
