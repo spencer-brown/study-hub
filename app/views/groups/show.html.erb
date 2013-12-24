@@ -8,7 +8,7 @@
 <p>
 	<strong>Etherpads:</strong>
 	<% @group.etherpads.each do |etherpad| %>
-		<%= etherpad.name %>
+		<p><%= etherpad.name %></p>
 	<% end %>
 </p>
 
@@ -17,3 +17,22 @@
 
 <%= link_to "Apply", apply_group_path(@group), remote: true, method: :put, class: "btn btn-large btn-primary" %>
 <%= link_to "Remove", remove_group_path(@group), remote: true, method: :put, class: "btn btn-large btn-primary" %>
+
+
+<button class="btn btn-primary Add">Add</button>
+
+<script>
+  $('.Add').click(function(){
+    var $this = $(this);
+    var apply = "<%= apply_group_path(@group) %>"
+    var remove = "<%= remove_group_path(@group) %>"
+    $this.toggleClass('Add');
+    if($this.hasClass('Add')){
+      $this.text('Add');
+      $.ajax({type: "PUT", url: remove});
+    } else {
+      $this.text('Remove');
+      $.ajax({type: "PUT", url: apply});
+    }
+  });
+</script>
