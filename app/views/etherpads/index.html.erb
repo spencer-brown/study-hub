@@ -44,6 +44,7 @@ $('#examplePadBasic').pad({'getContents':'exampleGetContents'});
 <div id="examplePadBasic"></div>
 <script type="text/javascript">
 // The most basic example
-$('#examplePadBasic').pad({'padId':'testpad1'}); // sets the pad id and puts the pad in the div
+var currentuser = "<%= current_user %>"
+$('#examplePadBasic').pad({'padId':'testpad1', 'userName': currentuser}); // sets the pad id and puts the pad in the div
 </script>
 
