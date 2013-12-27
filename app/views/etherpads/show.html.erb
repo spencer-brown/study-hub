@@ -29,5 +29,6 @@
 
 <script type="text/javascript">
 	var padname = "<%= @etherpad.name %>";
-	$('#examplePadBasic').pad({'padId': padname}); // sets the pad id and puts the pad in the div
+	var currentusername = "<%= current_user.name if current_user %>"
+	$('#examplePadBasic').pad({'padId': padname, 'userName': currentusername}); // sets the pad id and puts the pad in the div
 </script>

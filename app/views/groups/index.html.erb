@@ -1,9 +1,19 @@
-<h1>Listing groups</h1>
+<h1>Groups</h1>
+
+<h4>Current groups:</h4>
+<p>
+  <% if current_user %>
+    <% @user = current_user %>
+    <% @user.groups.each do |group| %>
+      <%= group.name %><br>
+    <% end %>
+  <% end %>
+</p>
 
 <table>
   <thead>
     <tr>
-      <th>Name</th>
+      <th><h4>All groups:</h4></th>
       <th></th>
       <th></th>
       <th></th>
@@ -14,9 +24,7 @@
     <% @groups.each do |group| %>
       <tr>
         <td><%= group.name %></td>
-        <td><%= link_to 'Show', group %></td>
-        <td><%= link_to 'Edit', edit_group_path(group) %></td>
-        <td><%= link_to 'Destroy', group, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+        <td><%= link_to "View this group's etherpads", group %></td>
       </tr>
     <% end %>
   </tbody>

@@ -1,4 +1,4 @@
-<h1>Listing etherpads</h1>
+<h1>Etherpads</h1>
 
 <table>
   <thead>
@@ -14,9 +14,11 @@
     <% @etherpads.each do |etherpad| %>
       <tr>
         <td><%= etherpad.name %></td>
-        <td><%= link_to 'Show', etherpad %></td>
-        <td><%= link_to 'Edit', edit_etherpad_path(etherpad) %></td>
-        <td><%= link_to 'Destroy', etherpad, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+        <td><%= link_to 'View', etherpad %></td>
+        <% if current_user.name == "Spencer Brown" %>
+          <td><%= link_to 'Edit', edit_etherpad_path(etherpad) %></td>
+          <td><%= link_to 'Destroy', etherpad, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+        <% end %>
       </tr>
     <% end %>
   </tbody>
@@ -25,26 +27,3 @@
 <br>
 
 <%= link_to 'New Etherpad', new_etherpad_path %></br>
-
-<% if current_user %>
-  <% @app_groups.each do |app_group| %>
-    <%= app_group.name %>
-  <% end %>
-<% end %>
-
-<!-- <script type="text/javascript">
-$('#examplePadBasic').pad({'padId':'kirby'}); // sets the pad id and puts the pad in the div
-$('#examplePadBasic').pad({'getContents':'exampleGetContents'});
-</script>
-
-<div id="examplePadBasic"></div> -->
-
-<!-- <iframe src='http://epl-spencerbrown.rhcloud.com/p/testpad1' width=600 height=400></iframe> -->
-
-<div id="examplePadBasic"></div>
-<script type="text/javascript">
-// The most basic example
-var currentusername = "<%= current_user.name %>"
-$('#examplePadBasic').pad({'padId':'testpad1', 'userName': currentusername}); // sets the pad id and puts the pad in the div
-</script>
-
