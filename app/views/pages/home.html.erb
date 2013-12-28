@@ -1,7 +1,9 @@
 <%= render 'pages/welcome' unless user_signed_in? %>
 
 <% if user_signed_in? %>
-	<h1>Dashboard</h1>
+	<h1>
+		<%= current_user.name %>'s Dashboard
+	</h1>
 	<% current_user.groups.each do |group| %>
 		<h3><%= group.name %></h3>
 		<% group.etherpads.each do |etherpad| %>
