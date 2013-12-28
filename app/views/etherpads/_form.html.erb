@@ -11,16 +11,26 @@
     </div>
   <% end %>
 
-  <div class="field">
-    <%= f.label :name %><br>
-    <%= f.text_field :name %>
-  </div>
+  <div class="row">
+    <div class="col-md-6">
+      <div class="form">
+        <div class="panel panel-default">
+          <div class="panel-body">
+            <div class="form-group">
+              <%= f.label :name %><br>
+              <%= f.text_field :name, class: 'form-control' %>
+            </div>
 
-  <div class="field">
-    <%= f.label :group %><br>
-    <%= f.collection_select(:group_id, @groups, :id, :name, :include_blank => "Please select") %>  </div>
-
-  <div class="actions">
-    <%= f.submit %>
+            <div class="form-group">
+              <%= f.label :group %><br>
+              <%= f.collection_select :group_id, @groups, :id, :name, {:include_blank => "Please select"}, {class: 'form-control'} %>  
+            </div>
+          </div>
+          <div class="panel-footer">
+            <%= f.submit 'Create Etherpad', class: 'btn btn-primary' %>
+          </div>
+        </div>
+      </div>
+    </div>
   </div>
 <% end %>
