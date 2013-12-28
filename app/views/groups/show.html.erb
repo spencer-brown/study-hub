@@ -2,10 +2,15 @@
 
 <h2>
   <%= @group.name %>
+  <div class="
+    btn 
+    btn-xs
+    <%= @determine ? 'Remove' : 'Add' %> 
+    <%= @determine ? 'btn-danger' : 'btn-success' %>
+  ">
+    <%= @determine ? 'Remove this group'.html_safe : 'Add this group'.html_safe %>
+  </div>
 </h2>
-
-<div class=" btn btn-primary <%= @determine ? 'Remove' : 'Add' %>"><%= @determine ? 'Remove this group' : 'Add this group' %></div>
-
 <p>
 	<strong>Etherpads:</strong>
 	<% @group.etherpads.each do |etherpad| %>
@@ -20,18 +25,23 @@
 <%= link_to 'Edit', edit_group_path(@group) %> |
 <%= link_to 'Back', groups_path %>
 
-
 <script>
   $('.Add').click(function(){
     var $this = $(this);
-    var apply = "<%= apply_group_path(@group) %>"
-    var remove = "<%= remove_group_path(@group) %>"
+    var apply = "<%= apply_group_path(@group) %>";
+    var remove = "<%= remove_group_path(@group) %>";
+    var addtext = 'Add this group';
+    var removetext = 'Remove this group';
     $this.toggleClass('Add');
     if($this.hasClass('Add')){
-      $this.text('Add this group');
+      $this.text(addtext);
+      $this.removeClass('btn-danger');
+      $this.addClass('btn-success');
       $.ajax({type: "GET", url: remove});
     } else {
-      $this.text('Remove this group');
+      $this.text(removetext);
+      $this.removeClass('btn-success');
+      $this.addClass('btn-danger');
       $.ajax({type: "GET", url: apply});
     }
   });
@@ -40,12 +50,18 @@
     var $this = $(this);
     var apply = "<%= remove_group_path(@group) %>"
     var remove = "<%= apply_group_path(@group) %>"
+    var addtext = 'Add this group';
+    var removetext = 'Remove this group';
     $this.toggleClass('Add');
     if($this.hasClass('Add')){
-      $this.text('Add this group');
+      $this.text(addtext);
       $.ajax({type: "GET", url: apply});
+      $this.removeClass('btn-danger');
+      $this.addClass('btn-success');
     } else {
-      $this.text('Remove this group');
+      $this.text(removetext);
+      $this.removeClass('btn-success');
+      $this.addClass('btn-danger');
       $.ajax({type: "GET", url: remove});
     }
   });
