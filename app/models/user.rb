@@ -8,5 +8,4 @@ class User < ActiveRecord::Base
   has_many :etherpads, :through => :groups
 
   validates :name, presence: true
-
 end
