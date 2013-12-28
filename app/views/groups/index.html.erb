@@ -1,8 +1,9 @@
 <h1>Manage Groups</h1>
+<p class="lead">Click a group to view its etherpads and add or remove it from Your Groups.</p>
 
 <div class="panel panel-default">
   <div class="panel-heading">
-    <h4 class="panel-title">Current groups</h4>
+    <h4 class="panel-title">Your Groups</h4>
   </div>
   <ul class="list-group">
     <% if current_user %>
@@ -20,14 +21,16 @@
 
 <div class="panel panel-default">
   <div class="panel-heading">
-    <h4 class="panel-title">All groups 
-      <%= link_to new_group_path, class: "btn btn-primary btn-xs" do %>
-        <div style="color:white"><i class="fa fa-plus"></i> New group</div>
-      <% end %>
-    </h4>
-  </div>
-  <div class="panel-body">
-    <p>Click a group to view its etherpads and add or remove it from your groups.</p>
+    <div class="row">
+      <div class="col-md-9">
+        <h4 class="panel-title">All Groups</h4>
+      </div>
+      <div class="col-md-3 text-right">
+        <%= link_to new_group_path, class: "btn btn-primary btn-xs" do %>
+          <div style="color:white"><i class="fa fa-plus"></i> New group</div>
+        <% end %>
+      </div>
+    </div>
   </div>
   <ul class="list-group">
     <% @groups.each do |group| %>

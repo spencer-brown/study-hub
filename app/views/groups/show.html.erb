@@ -8,7 +8,7 @@
     <%= @determine ? 'Remove' : 'Add' %> 
     <%= @determine ? 'btn-danger' : 'btn-success' %>
   ">
-    <%= @determine ? 'Remove this group'.html_safe : 'Add this group'.html_safe %>
+    <%= @determine ? 'Remove group'.html_safe : 'Add group'.html_safe %>
   </div>
 </h2>
 
@@ -35,8 +35,8 @@
     var $this = $(this);
     var apply = "<%= apply_group_path(@group) %>";
     var remove = "<%= remove_group_path(@group) %>";
-    var addtext = 'Add this group';
-    var removetext = 'Remove this group';
+    var addtext = 'Add group';
+    var removetext = 'Remove group';
     $this.toggleClass('Add');
     if($this.hasClass('Add')){
       $this.text(addtext);
@@ -55,8 +55,8 @@
     var $this = $(this);
     var apply = "<%= remove_group_path(@group) %>"
     var remove = "<%= apply_group_path(@group) %>"
-    var addtext = 'Add this group';
-    var removetext = 'Remove this group';
+    var addtext = 'Add group';
+    var removetext = 'Remove group';
     $this.toggleClass('Add');
     if($this.hasClass('Add')){
       $this.text(addtext);
