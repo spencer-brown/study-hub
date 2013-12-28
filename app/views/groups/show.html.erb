@@ -1,8 +1,8 @@
 <p id="notice"><%= notice %></p>
 
-<h1>
+<h2>
   <%= @group.name %>
-</h1>
+</h2>
 
 <div class=" btn btn-primary <%= @determine ? 'Remove' : 'Add' %>"><%= @determine ? 'Remove this group' : 'Add this group' %></div>
 
@@ -38,8 +38,8 @@
 
     $('.Remove').click(function(){
     var $this = $(this);
-    var apply = "<%= apply_group_path(@group) %>"
-    var remove = "<%= remove_group_path(@group) %>"
+    var apply = "<%= remove_group_path(@group) %>"
+    var remove = "<%= apply_group_path(@group) %>"
     $this.toggleClass('Add');
     if($this.hasClass('Add')){
       $this.text('Add this group');

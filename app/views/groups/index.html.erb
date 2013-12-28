@@ -1,36 +1,37 @@
-<h1>Groups</h1>
+<h1>Manage Groups</h1>
 
-<h4>Current groups:</h4>
-<p>
-  <% if current_user %>
-    <% @user = current_user %>
-    <% @user.groups.each do |group| %>
-      <%= group.name %><br>
+<div class="panel panel-default">
+  <div class="panel-heading">
+    <h4 class="panel-title">Current groups</h4>
+  </div>
+  <ul class="list-group">
+    <% if current_user %>
+      <% @user = current_user %>
+      <% @user.groups.each do |group| %>
+        <li class="list-group-item">
+          <%= group.name %><br>
+        </li>
+      <% end %>
     <% end %>
-  <% end %>
-</p>
+  </ul>
+</div>
 
-<table>
-  <thead>
-    <tr>
-      <th><h4>All groups:</h4></th>
-      <th></th>
-      <th></th>
-      <th></th>
-    </tr>
-  </thead>
-
-  <tbody>
+<div class="panel panel-default">
+  <div class="panel-heading">
+    <h4 class="panel-title">All groups 
+      <%= link_to new_group_path, class: "btn btn-primary btn-xs" do %>
+        <div style="color:white"><i class="fa fa-plus"></i> New group</div>
+      <% end %>
+    </h4>
+  </div>
+  <div class="panel-body">
+    <p>Click a group to view its etherpads and add or remove it from your groups.</p>
+  </div>
+  <ul class="list-group">
     <% @groups.each do |group| %>
-      <tr>
-        <td><%= group.name %></td>
-        <td><%= link_to "View etherpads", group %></td>
-      </tr>
+      <li class="list-group-item">
+        <%= link_to group.name, group %>
+      </li>
     <% end %>
-  </tbody>
-</table>
-
-<br>
-
-<%= link_to 'New Group', new_group_path %>
-<br>
+  </ul>
+</div>
