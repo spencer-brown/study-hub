@@ -1,16 +1,25 @@
 <p id="notice"><%= notice %></p>
 
-<h2>
-  <%= @group.name %>
-  <div class="
-    btn 
-    btn-xs
-    <%= @determine ? 'Remove' : 'Add' %> 
-    <%= @determine ? 'btn-danger' : 'btn-success' %>
-  ">
-    <%= @determine ? 'Remove group'.html_safe : 'Add group'.html_safe %>
+<div class="row">
+  <div class="col-md-8">
+    <h2>
+      <%= @group.name %>
+      <div class="
+        btn 
+        btn-xs
+        <%= @determine ? 'Remove' : 'Add' %> 
+        <%= @determine ? 'btn-danger' : 'btn-success' %>
+      ">
+        <%= @determine ? 'Remove group'.html_safe : 'Add group'.html_safe %>
+      </div>
+    </h2>
   </div>
-</h2>
+  <div class="col-md-4 text-right">
+      <%= link_to groups_path, class: "btn btn-default" do %>
+        <i class="fa fa-arrow-left"></i> Manage Groups
+      <% end %>
+  </div>
+</div>
 
 <div class="panel panel-default">
 	<div class="panel-heading">
