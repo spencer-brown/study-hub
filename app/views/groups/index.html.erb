@@ -35,7 +35,12 @@
   <ul class="list-group">
     <% @groups.each do |group| %>
       <li class="list-group-item">
-        <%= link_to group.name, group %>
+        <%= link_to group do %>
+          <%= group.name %>
+          <% if current_user.groups.include? group %>
+            <i class="fa fa-check-circle"></i>
+          <% end %>
+        <% end %>
       </li>
     <% end %>
   </ul>
