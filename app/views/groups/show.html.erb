@@ -11,16 +11,21 @@
     <%= @determine ? 'Remove this group'.html_safe : 'Add this group'.html_safe %>
   </div>
 </h2>
-<p>
-	<strong>Etherpads:</strong>
-	<% @group.etherpads.each do |etherpad| %>
-		<p>
-      <%= link_to etherpad do %>
-        <%= etherpad.name %>
-      <% end %>
-    </p>
-	<% end %>
-</p>
+
+<div class="panel panel-default">
+	<div class="panel-heading">
+    <h3 class="panel-title">Etherpads</h3>
+  </div>
+  <ul class="list-group">
+    <% @group.etherpads.each do |etherpad| %>
+      <li class="list-group-item">
+          <%= link_to etherpad do %>
+            <%= etherpad.name %>
+          <% end %>
+      </li>
+    <% end %>
+  </ul>
+</div>
 
 <%= link_to 'Edit', edit_group_path(@group) %> |
 <%= link_to 'Back', groups_path %>

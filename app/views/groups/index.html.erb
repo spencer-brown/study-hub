@@ -9,7 +9,9 @@
       <% @user = current_user %>
       <% @user.groups.each do |group| %>
         <li class="list-group-item">
-          <%= group.name %><br>
+          <%= link_to group do %>
+            <%= group.name %>
+          <% end %>
         </li>
       <% end %>
     <% end %>
