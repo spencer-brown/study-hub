@@ -10,12 +10,12 @@
           <div class="form">
             <div class="form-group">
               <%= f.label :name %><br>
-              <%= f.text_field :name, autofocus: true, class: 'form-control' %>
+              <%= f.text_field :name, autofocus: true, :placeholder => "John Purdue", class: 'form-control' %>
             </div>
 
             <div class="form-group">
-              <%= f.label :email %><br />
-              <%= f.email_field :email, class: 'form-control' %>
+              <%= f.label :email, "@purdue.edu email address" %><br />
+              <%= f.email_field :email, :placeholder => "johnpurdue@purdue.edu", class: 'form-control' %>
             </div>
 
             <div class="form-group">
