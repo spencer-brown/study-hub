@@ -1,9 +1,9 @@
-<h1>Groups</h1>
-<p class="lead">Click a group to view its etherpads and add or remove it from your groups.</p>
+<h1>Courses</h1>
+<p class="lead">Click a course to view its StudyPads and add or remove it from your courses.</p>
 
 <div class="panel panel-default">
   <div class="panel-heading">
-    <h4 class="panel-title">My Groups</h4>
+    <h4 class="panel-title">My Courses</h4>
   </div>
   <ul class="list-group">
     <% if current_user %>
@@ -23,11 +23,11 @@
   <div class="panel-heading">
     <div class="row">
       <div class="col-md-9">
-        <h4 class="panel-title">All Groups</h4>
+        <h4 class="panel-title">All Courses</h4>
       </div>
       <div class="col-md-3 text-right">
         <%= link_to new_group_path, class: "btn btn-primary btn-xs" do %>
-          <div style="color:white"><i class="fa fa-plus"></i> Add group</div>
+          <div style="color:white"><i class="fa fa-plus"></i> Add course</div>
         <% end %>
       </div>
     </div>

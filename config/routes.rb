@@ -1,8 +1,8 @@
 Studypool::Application.routes.draw do
   root "pages#home"
   devise_for :users
-  resources :etherpads
-  resources :groups do
+  resources :etherpads, path: 'studypads'
+  resources :groups, path: 'courses' do
       # allows 'apply' button to add current user to a class
       get 'apply', on: :member
       get 'remove', on: :member

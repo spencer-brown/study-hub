@@ -8,13 +8,13 @@
         <%= @determine ? 'Remove' : 'Add' %> 
         <%= @determine ? 'btn-danger' : 'btn-success' %>
       ">
-        <%= @determine ? 'Remove group'.html_safe : 'Add group'.html_safe %>
+        <%= @determine ? 'Remove from my courses'.html_safe : 'Add to my courses'.html_safe %>
       </div>
     </h2>
   </div>
   <div class="col-md-4 text-right">
       <%= link_to groups_path, class: "btn btn-default" do %>
-        <i class="fa fa-arrow-left"></i> Groups
+        <i class="fa fa-arrow-left"></i> Courses
       <% end %>
   </div>
 </div>
@@ -23,11 +23,11 @@
   <div class="panel-heading">
     <div class="row">
       <div class="col-md-8">
-        <h3 class="panel-title">Etherpads</h3>
+        <h3 class="panel-title">StudyPads</h3>
       </div>
       <div class="col-md-4 text-right">
         <%= link_to new_etherpad_path, class: "btn btn-primary btn-xs" do %>
-          <div style="color:white"><i class="fa fa-pencil-square-o"></i> New Etherpad</div>
+          <div style="color:white"><i class="fa fa-pencil-square-o"></i> New StudyPad</div>
         <% end %>
       </div>
     </div>
@@ -49,8 +49,8 @@
     var $this = $(this);
     var apply = "<%= apply_group_path(@group) %>";
     var remove = "<%= remove_group_path(@group) %>";
-    var addtext = 'Add group';
-    var removetext = 'Remove group';
+    var addtext = 'Add to my courses';
+    var removetext = 'Remove from my courses';
     $this.toggleClass('Add');
     if($this.hasClass('Add')){
       $this.text(addtext);
@@ -69,8 +69,8 @@
     var $this = $(this);
     var apply = "<%= remove_group_path(@group) %>"
     var remove = "<%= apply_group_path(@group) %>"
-    var addtext = 'Add group';
-    var removetext = 'Remove group';
+    var addtext = 'Add to my courses';
+    var removetext = 'Remove from my courses';
     $this.toggleClass('Add');
     if($this.hasClass('Add')){
       $this.text(addtext);

@@ -1,7 +1,7 @@
 <%= form_for(@group) do |f| %>
   <% if @group.errors.any? %>
     <div id="error_explanation">
-      <h2><%= pluralize(@group.errors.count, "error") %> prohibited this group from being saved:</h2>
+      <h2><%= pluralize(@group.errors.count, "error") %> prohibited this course from being saved:</h2>
 
       <ul>
       <% @group.errors.full_messages.each do |msg| %>
@@ -14,12 +14,12 @@
   <div class="form">
     <div class="panel-body">
       <div class="form-group">
-        <%= f.label 'Group Number' %><br>
+        <%= f.label 'Course Number' %><br>
         <%= f.text_field :name, class: 'form-control' %>
       </div>
     </div>
     <div class="panel-footer">
-      <%= f.submit 'Create group', class: "btn btn-primary" %>
+      <%= f.submit 'Create course', class: "btn btn-primary" %>
     </div>
   </div>
 <% end %>

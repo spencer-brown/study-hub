@@ -1,7 +1,7 @@
 <%= form_for(@etherpad) do |f| %>
   <% if @etherpad.errors.any? %>
     <div id="error_explanation">
-      <h2><%= pluralize(@etherpad.errors.count, "error") %> prohibited this etherpad from being saved:</h2>
+      <h2><%= pluralize(@etherpad.errors.count, "error") %> prohibited this Study Pad from being saved:</h2>
 
       <ul>
       <% @etherpad.errors.full_messages.each do |msg| %>
@@ -27,7 +27,7 @@
             </div>
           </div>
           <div class="panel-footer">
-            <%= f.submit 'Create Etherpad', class: 'btn btn-primary' %>
+            <%= f.submit 'Create StudyPad', class: 'btn btn-primary' %>
           </div>
         </div>
       </div>
