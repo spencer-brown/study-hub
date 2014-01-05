@@ -15,42 +15,42 @@
     <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
       <ul class="nav navbar-nav navbar-right">
         <% if user_signed_in? %>
-          <li>
+          <li class="<%= 'active' if current_page?(root_path) %>">
             <%= link_to '/' do %>
-              <i class="fa fa-rocket"></i> Dashboard
+                <i class="fa fa-rocket"></i> Dashboard
             <% end %>
           </li>
 
-          <li>
+          <li class="<%= 'active' if current_page?(new_etherpad_path) %>">
             <%= link_to new_etherpad_path do %>
               <i class="fa fa-pencil-square-o"></i> New StudyPad
             <% end %>
           </li>
 
-          <li>
+          <li class="<%= 'active' if current_page?(groups_path) %>">
             <%= link_to groups_path do %>
               <i class="fa fa-group"></i> Courses
             <% end %>
           </li>
 
-          <li>
+          <li class="<%= 'active' if current_page?(edit_user_registration_path) %>">
             <%= link_to edit_user_registration_path do %>
               <i class="fa fa-user"></i> Account
             <% end %>
           </li>
           
-          <li>
+          <li class="<%= 'active' if current_page?(destroy_user_session_path) %>">
             <%= link_to destroy_user_session_path, method: :delete do %>
               <i class="fa fa-sign-out"></i> Sign Out
             <% end %>
           </li>
         <% else %>
-          <li>
+          <li class="<%= 'active' if current_page?(new_user_session_path) %>">
             <%= link_to new_user_session_path do %>
               <i class="fa fa-sign-in"></i> Sign In
             <% end %>
           </li>
-          <li>
+          <li class="<%= 'active' if current_page?(new_user_registration_path) %>">
             <%= link_to new_user_registration_path do %>
               <i class="fa fa-key"></i> Sign Up
             <% end %>
