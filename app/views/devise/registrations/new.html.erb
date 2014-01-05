@@ -27,18 +27,15 @@
               <%= f.label :password_confirmation %><br />
               <%= f.password_field :password_confirmation, class: 'form-control' %>
             </div>
+            <div>
+              <%= f.submit "Sign Up", class: 'btn btn-primary' %>
+            </div>
           </div>
         </div>
         <div class="panel-footer">
-          <div>
-            <%= f.submit "Sign Up", class: 'btn btn-primary' %>
-          </div>
+          <%= render "devise/shared/links" %>
         </div>
       </div>
     </div>
   </div>
-<% end %>
-
-<%= link_to new_user_session_path do %>
-  Sign In
 <% end %>
