@@ -42,6 +42,11 @@
       </li>
     <% end %>
   </ul>
+  <% if @group.etherpads.empty? %>
+    <div class="panel-body">
+      There are no StudyPads to display for this course.
+    </div>
+<% end %>
 </div>
 
 <script>

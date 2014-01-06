@@ -2,6 +2,11 @@
 
 <% if user_signed_in? %>
 	<h1>My Dashboard</h1>
+	<% if current_user.groups.empty? %>
+		<%= link_to groups_path do %>
+			<p class="lead">It looks like you haven't added any courses yet. Click here to go to the Courses page, where you can add your courses.</p>
+		<% end %>
+	<% end %>
 	<% current_user.groups.each do |group| %>
 		<div class="panel panel-default">
 			<div class="panel-heading">

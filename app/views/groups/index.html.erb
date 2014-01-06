@@ -17,6 +17,11 @@
       <% end %>
     <% end %>
   </ul>
+  <% if @user.groups.empty? %>
+    <div class="panel-body">
+      Click on courses below to add them to your courses!
+    </div>
+  <% end %>
 </div>
 
 <div class="panel panel-default">
