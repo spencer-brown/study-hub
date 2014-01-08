@@ -8,7 +8,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 </head>
 <body>
-	<%= render 'layouts/header' if current_user %>
+	<%= render 'layouts/header' unless current_page?(root_path) %>
 
 	<div id="wrap">
 		<div id="main" class="container clear-top">

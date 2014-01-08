@@ -16,7 +16,7 @@
       <ul class="nav navbar-nav navbar-right">
         <% if user_signed_in? %>
           <li class="<%= 'active' if current_page?(root_path) %>">
-            <%= link_to '/' do %>
+            <%= link_to dashboard_path do %>
                 <i class="fa fa-rocket"></i> Dashboard
             <% end %>
           </li>
