@@ -26,13 +26,13 @@ body {
 
 #homepage-body .what-bg {
   position:absolute;
-	height: 100%;
   width: 100%;
+	height: 800px;
   background-image: url("/assets/library6.jpg");
   background-position: 0 center;
-  background-repeat: no-repeat;
+  // background-repeat: no-repeat;
   background-size: cover;
-  text-align: center;
+  // text-align: center;
   // overflow: hidden;
   left:0px;
   bottom:0px;
@@ -54,6 +54,7 @@ body {
 #homepage-body .what-text{
 	text-align: left;
 	position: relative;
+	height: 100%;
 }
 
 #homepage-body .what-text h1 {
