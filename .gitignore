@@ -19,3 +19,6 @@ etherpad-lite/.DS_Store
 etherpad-lite/var/*
 Ideas.txt
 APIKEY.txt
+
+#psds
+/assets/images/*.psd
