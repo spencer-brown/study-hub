@@ -1,40 +1,18 @@
-<%= render 'pages/welcome' unless user_signed_in? %>
-
-<% if user_signed_in? %>
-	<h1>My Dashboard</h1>
-	<% if current_user.groups.empty? %>
-		<%= link_to groups_path do %>
-			<p class="lead">It looks like you haven't added any courses yet. Click here to go to the Courses page, where you can add your courses.</p>
-		<% end %>
-	<% end %>
-	<% current_user.groups.each do |group| %>
-		<div class="panel panel-default">
-			<div class="panel-heading">
-				<div class="row">
-					<div class="col-md-8">
-						<h3 class="panel-title"><%= group.name %></h3>
-					</div>
-					<div class="col-md-4 text-right">
-						<%= link_to group, class: "btn btn-primary btn-xs" do %>
-		          <div style="color:white"><%= group.name %> <i class="fa fa-arrow-right"></i></div>
-		        <% end %>
-					</div>
-				</div>
-			</div>
-			<ul class="list-group">
-				<% group.etherpads.each do |etherpad| %>
-			      <li class="list-group-item">
-				      <%= link_to etherpad do %>
-				        <%= etherpad.name %>
-				      <% end %>
-				    </li>
-				<% end %>
-			</ul>
-			<% if group.etherpads.empty? %>
-				<div class="panel-body">
-					There are no StudyPads to display for this course.
-				</div>
-			<% end %>
-		</div>
-	<% end %>
-<% end %>
+<div class="index-carousel">
+  <div class="carousel-images">
+    <div class="carousel-item index-carousel-item mlb-victis active">
+      <div class="index-carousel-item-wrapper">
+        <section class="index-carousel-content">
+        	<div class="jumbotron">
+            <h1>Study Pool</h1>
+            <p>Changing the way students prepare for exams forever.</p>
+          </div>
+        </section>
+        <div class="index-carousel-overlay"></div>
+        <div class="index-carousel-background">
+					<%= image_tag("library5.jpg") %>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

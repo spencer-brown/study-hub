@@ -1,5 +1,6 @@
 Studypool::Application.routes.draw do
   root "pages#home"
+  get 'dashboard' => 'pages#dashboard'
   devise_for :users
   resources :etherpads, path: 'studypads'
   resources :groups, path: 'courses' do
