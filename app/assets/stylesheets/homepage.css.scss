@@ -3,10 +3,12 @@
 #homepage-navbar {
 	height: 72px;
 	opacity: 0.85;
+	padding-top: 14px;
 }
 
 #homepage-navbar .navbar-brand {
 	font-size: 30px;
+	font-weight: normal;
 }
 
 #homepage-navbar .navbar-nav li {
@@ -19,20 +21,49 @@
 /* ===== Body ===== */
 
 body { 
+	padding-top: 92px;
 }
 
-#what {
-  height: 800px;
+#homepage-body .what-bg {
+  position:absolute;
+	height: 100%;
   width: 100%;
   background-image: url("/assets/library5.jpg");
   background-position: 0 center;
   background-repeat: no-repeat;
   background-size: cover;
   text-align: center;
-  overflow: hidden;
-  position:absolute;
+  // overflow: hidden;
   left:0px;
   bottom:0px;
+}
+
+#homepage-body .what-box{
+  position: absolute;
+	margin: auto;
+  top: 0;
+  left:0;
+  right:0;
+  bottom:0;
+  height: 300px;
+  // background-color: #efefef;
+  background:rgba(239,239,239,0.65);
+  // opacity: 0.65;
+}
+
+#homepage-body .what-text{
+	text-align: left;
+	position: relative;
+}
+
+#homepage-body .what-text h1 {
+	font-size: 60px;
+	font-weight: normal;
+}
+
+#homepage-body .what-text p {
+	font-size: 30px;
+	font-weight: normal;
 }
 
 #why {
