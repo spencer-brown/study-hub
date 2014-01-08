@@ -19,26 +19,35 @@
 /* ===== Body ===== */
 
 body { 
-	padding-top: 70px; 
 }
 
 #what {
-  height: 800px
+  height: 800px;
+  width: 100%;
+  background-image: url("/assets/library5.jpg");
+  background-position: 0 center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  text-align: center;
+  overflow: hidden;
+  position:absolute;
+  left:0px;
+  bottom:0px;
 }
 
 #why {
-  height: 800px
+  height: 800px;
 }
 
 #how {
-  height: 800px
+  height: 800px;
 }
 
 #who {
-  height: 800px
+  height: 800px;
 }
 
 #about {
-  height: 800px
+  height: 800px;
 }
 
