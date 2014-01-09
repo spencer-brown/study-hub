@@ -1,6 +1,7 @@
 class EtherpadsController < ApplicationController
   before_action :set_etherpad, only: [:show, :edit, :update, :destroy]
   before_filter :prepare_groups
+  before_filter :authenticate_user!
 
   # for development, use:
   # Api_path = '/Users/spencerbrown/Documents/Projects/epl/APIKEY.txt'
