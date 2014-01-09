@@ -33,6 +33,16 @@
     		<li>
       		<a href="#about">About</a>
       	</li>
+        <li>
+          <%= link_to new_user_session_path do %>
+            <i class="fa fa-sign-in"></i> Sign In
+          <% end %>
+        </li>
+        <li>
+          <%= link_to new_user_registration_path do %>
+            <i class="fa fa-key"></i> Sign Up
+          <% end %>
+        </li>
       </ul>
     </div><!-- /.navbar-collapse -->
   </div><!-- container -->
