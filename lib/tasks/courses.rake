@@ -4,9 +4,17 @@ task :load_subjects => :environment do
 	File.open("subject_names.txt", "r").each_line do |line|
 	  clean_line = (line.split('>'))[1]
 	  subject_abbr = (clean_line.split('-'))[0]
+	  
+	  # creates new line character at the end of each line
 	  subject_name = (clean_line.split('-'))[1]
 
 	  Subject.create abbr: subject_abbr, name: subject_name
 	end
+end
 
+desc 'destroy all subjects currently loaded in the db'
+task :clear_subjects => :environment do
+	for subject in Subject.all
+		subject.destroy
+	end
 end
