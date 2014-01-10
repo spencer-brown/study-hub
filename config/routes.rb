@@ -3,9 +3,7 @@ Studypool::Application.routes.draw do
   get 'dashboard' => 'pages#dashboard'
   devise_for :users
   resources :etherpads, path: 'studypads'
-  
   resources :subjects
-
   resources :groups, path: 'courses' do
     # allows 'apply' button to add current user to a class
     get 'apply', on: :member

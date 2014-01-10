@@ -1,4 +1,42 @@
-<p id="notice"><%= notice %></p>
+<div class="row">
+  <div class="col-md-8">
+    <h2>
+      <%= @subject.name %>
+    </h2>
+  </div>
+  <div class="col-md-4 text-right">
+      <%= link_to subjects_path, class: "btn btn-default" do %>
+        <i class="fa fa-arrow-left"></i> Subjects
+      <% end %>
+  </div>
+</div>
 
-<%= link_to 'Edit', edit_subject_path(@subject) %> |
-<%= link_to 'Back', subjects_path %>
+<div class="panel panel-default">
+  <div class="panel-heading">
+    <div class="row">
+      <div class="col-md-8">
+        <h3 class="panel-title">StudyPads</h3>
+      </div>
+      <div class="col-md-4 text-right">
+        <%= link_to new_etherpad_path, class: "btn btn-primary btn-xs" do %>
+          <div style="color:white"><i class="fa fa-pencil-square-o"></i> New StudyPad</div>
+        <% end %>
+      </div>
+    </div>
+  </div>
+
+  <ul class="list-group">
+    <% @group.etherpads.each do |etherpad| %>
+      <li class="list-group-item">
+          <%= link_to etherpad do %>
+            <%= etherpad.name %>
+          <% end %>
+      </li>
+    <% end %>
+  </ul>
+  <% if @group.etherpads.empty? %>
+    <div class="panel-body">
+      There are no StudyPads to display for this course.
+    </div>
+<% end %>
+</div>
