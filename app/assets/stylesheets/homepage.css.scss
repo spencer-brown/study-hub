@@ -12,7 +12,7 @@
 }
 
 #homepage-navbar .navbar-nav li {
-	font-size: 22px;
+	font-size: 17px;
   color: white;
 }
 
@@ -24,24 +24,30 @@
 
 #homepage-body body { 
 	padding-top: 92px;
+  margin:0;
 }
 
 #homepage-body .what-bg {
-  position:absolute;
-  width: 100%;
-	height: 100%;
-  background-image: url("/assets/library6.jpg");
-  background-position: 0 center;
-  // background-repeat: no-repeat;
-  background-size: cover;
-  // text-align: center;
-  // overflow: hidden;
-  left:0px;
-  bottom:0px;
+ //  position:absolute;
+ //  width: 100%;
+	// height: 100%;
+ //  background-image: url("/assets/library6.jpg");
+ //  background-position: 0 center;
+ //  // background-repeat: no-repeat;
+ //  background-size: cover;
+ //  // text-align: center;
+ //  // overflow: hidden;
+ //  left:0px;
+ //  bottom:0px;
+
+ position:absolute; width:100%; height:100%; background: green;
+ background-image: url('/assets/library6.jpg');
+ background-size: cover;
+ left:0;
 }
 
 #homepage-body .what-box{
-  position: absolute;
+  position:absolute;
 	margin: auto;
   top: 0;
   left:0;
@@ -49,7 +55,7 @@
   bottom:0;
   height: 300px;
   // background-color: #efefef;
-  background:rgba(239,239,239,0.65);
+  background-color:rgba(239,239,239,0.65);
   // opacity: 0.65;
 }
 
@@ -69,6 +75,10 @@
 	font-size: 30px;
 	font-weight: normal;
 	color: #3d3d3d;
+}
+
+#homepage-body .content {
+  position:absolute; width:100%; top:100%; height: 100px;
 }
 
 #why {
