@@ -23,6 +23,7 @@ ActiveRecord::Schema.define(version: 20140110021438) do
   add_index "etherpads", ["group_id"], name: "index_etherpads_on_group_id"
 
   create_table "groups", force: true do |t|
+    t.integer  "user_id"
     t.datetime "created_at"
     t.datetime "updated_at"
     t.string   "name"

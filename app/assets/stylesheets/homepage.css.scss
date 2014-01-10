@@ -1,3 +1,7 @@
+html, body {
+  height: 100%;
+}
+
 /* ===== Navbar ===== */
 
 #homepage-navbar {
@@ -32,25 +36,18 @@
 	height: 100%;
   background-image: url("/assets/library6.jpg");
   background-position: 0 center;
-  // background-repeat: no-repeat;
   background-size: cover;
-  // text-align: center;
-  // overflow: hidden;
   left:0px;
   bottom:0px;
+  z-index: 1;
 }
 
 #homepage-body .what-box{
   position: absolute;
-	margin: auto;
-  top: 0;
-  left:0;
-  right:0;
-  bottom:0;
-  height: 300px;
-  // background-color: #efefef;
-  background:rgba(239,239,239,0.65);
-  // opacity: 0.65;
+  left: 0;
+  right: 0;
+  background: rgba(239,239,239,0.65);
+  z-index: 2;
 }
 
 #homepage-body .what-text{
@@ -71,19 +68,7 @@
 	color: #3d3d3d;
 }
 
-#why {
-  height: 800px;
-}
-
-#how {
-  height: 800px;
-}
-
-#who {
-  height: 800px;
-}
-
-#about {
+#why, #how, #who, #about {
   height: 800px;
 }
 
