@@ -1,3 +1,0 @@
-Ideas:
-
--If we create strict guidelines (or have some sort of drop-down system) for creating etherpad names (so that there really isn't freedom to mess up), we can prevent people from creating duplicate study guides.
