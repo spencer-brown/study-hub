@@ -1,4 +1,12 @@
-desc 'load subjects from subjects.txt into the database'
+desc 'get subjects from course list'
+task :get_subjects => :environment do
+	
+end
+
+
+
+
+desc 'load subjects from subject_names.txt into the database'
 task :load_subjects => :environment do
 	File.open("subject_names.txt", "r").each_line do |line|
 	  # remove excess html from scrape
@@ -26,4 +34,20 @@ task :clear_subjects => :environment do
 	for subject in Subject.all
 		subject.destroy
 	end
+end
+
+
+
+desc 'load courses from purdue-courses.txt'
+task :load_courses => :environment do
+	File.open("purdue-courses.txt", "r").each_line do |line|
+		
+		# separate course number and name
+		number_name = line.split(' - ')
+
+		subject_id = Subject.find_by_abbr((number_name[0].split(' '))[0])
+		puts subject_id
+
+		puts 'no subject' if subject_id == nil
+	end	
 end
