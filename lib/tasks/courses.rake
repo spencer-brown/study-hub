@@ -1,6 +1,17 @@
 desc 'get subjects from course list'
 task :get_subjects => :environment do
-	
+	subject_abbr_list = []
+
+	# get list of subject abbr
+	File.open("purdue-courses.txt", "r").each_line do |line|
+		subject = (line.split(' - ')[0]).split(' ')[0]
+		subject_abbr_list << subject if !subject_abbr_list.include? subject
+	end
+
+	# write list to get_subjects.txt
+	File.open("get_subjects.txt", "w+") do |f|
+  	subject_abbr_list.each { |subject_abbr| f.puts(subject_abbr) }
+  end
 end
 
 
@@ -8,23 +19,32 @@ end
 
 desc 'load subjects from subject_names.txt into the database'
 task :load_subjects => :environment do
-	File.open("subject_names.txt", "r").each_line do |line|
-	  # remove excess html from scrape
-	  clean_line = (line.split('>'))[1]
-	  subject_abbr = (clean_line.split('-'))[0]
-	  
-	  # separate name and abbr
-	  name_split = clean_line.split('-')
-	  
-	  # account for names that have heiphens
-	  subject_name = ""
-	  name_split[1..name_split.size].each do |word|
-	  	subject_name += "#{word}" + ' '
-	  end
-	  subject_name = subject_name.strip
 
-	  Subject.create abbr: subject_abbr, name: subject_name
-	end
+	# The scraped subject_names.txt doesn't include all of the subjects
+	# -----------------------------------------------------------------
+	# File.open("subject_names.txt", "r").each_line do |line|
+	#   # remove excess html from scrape
+	#   clean_line = (line.split('>'))[1]
+	#   subject_abbr = (clean_line.split('-'))[0]
+	  
+	#   # separate name and abbr
+	#   name_split = clean_line.split('-')
+	  
+	#   # account for names that have heiphens
+	#   subject_name = ""
+	#   name_split[1..name_split.size].each do |word|
+	#   	subject_name += "#{word}" + ' '
+	#   end
+	#   subject_name = subject_name.strip
+
+	#   Subject.create abbr: subject_abbr, name: subject_name
+	# end
+
+	File.open("get_subjects.txt", "r").each_line do |line|
+	  subject_abbr = line.chomp
+
+	  Subject.create abbr: subject_abbr, name: nil
+	end	
 end
 
 
@@ -48,6 +68,6 @@ task :load_courses => :environment do
 		subject_id = Subject.find_by_abbr((number_name[0].split(' '))[0])
 		puts subject_id
 
-		puts 'no subject' if subject_id == nil
+		puts 'no subject', number_name[0] if subject_id == nil
 	end	
 end

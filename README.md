@@ -20,3 +20,4 @@
 * Image resizing in Etherpads
 * Change StudyPad route to show its name instead of its ID
 * General refactoring
+* When generating subjects, add names when available
