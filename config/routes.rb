@@ -4,12 +4,12 @@ Studypool::Application.routes.draw do
   devise_for :users
   resources :etherpads, path: 'studypads'
   
-  resources :subjects do
-    resources :groups, path: 'courses' do
-        # allows 'apply' button to add current user to a class
-        get 'apply', on: :member
-        get 'remove', on: :member
-    end
+  resources :subjects
+
+  resources :groups, path: 'courses' do
+    # allows 'apply' button to add current user to a class
+    get 'apply', on: :member
+    get 'remove', on: :member
   end
 
   # The priority is based upon order of creation: first created -> highest priority.
