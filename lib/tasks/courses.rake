@@ -58,6 +58,15 @@ end
 
 
 
+desc 'destroy all courses currently loaded in the db - for initial dev only'
+task :clear_courses => :environment do
+	for group in Group.all
+		group.destroy
+	end
+end
+
+
+
 desc 'load courses from purdue-courses.txt'
 task :load_courses => :environment do
 	File.open("purdue-courses.txt", "r").each_line do |line|
@@ -65,9 +74,10 @@ task :load_courses => :environment do
 		# separate course number and name
 		number_name = line.split(' - ')
 
-		subject_id = Subject.find_by_abbr((number_name[0].split(' '))[0])
+		subject_id = Subject.find_by_abbr((number_name[0].split(' '))[0]).id
+		# puts subject_id
 		number = (number_name[0].split(' '))[1]
-		name = number_name[1]
+		name = number_name[1].chomp
 
 		Group.create name: name, subject_id: subject_id, number: number
 	end	
