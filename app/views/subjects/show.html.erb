@@ -22,10 +22,10 @@
   </div>
 
   <ul class="list-group">
-    <% @subject.groups.each do |group| %>
+    <% @subject.groups.sort! { |a,b| a.number <=> b.number }.each do |group| %>
       <li class="list-group-item">
           <%= link_to group do %>
-            <%= group.name %>
+            <%= group.number + ' - ' + group.name %>
           <% end %>
       </li>
     <% end %>

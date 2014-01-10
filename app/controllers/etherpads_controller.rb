@@ -157,7 +157,7 @@ class EtherpadsController < ApplicationController
   private
      # add the @groups = Group.all to the before action so avail for all actions
     def prepare_groups
-      @groups = Group.all
+      @groups = current_user.groups
     end
 
     # Use callbacks to share common setup or constraints between actions.

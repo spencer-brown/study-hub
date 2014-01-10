@@ -25,6 +25,7 @@
               <%= f.label 'Course' %><br>
               <%= f.collection_select :group_id, @groups, :id, :name, {:include_blank => "Please select"}, {class: 'form-control'} %>  
             </div>
+            <p>Not seeing a course? You must add courses to your dashboard before creating StudyPads for them. <%= link_to 'Click here to browse courses.', subjects_path %></p>
           </div>
           <div class="panel-footer">
             <%= f.submit 'Create StudyPad', class: 'btn btn-primary' %>
