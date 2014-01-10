@@ -1,25 +1,18 @@
-<h1>Listing subjects</h1>
-
-<table>
-  <thead>
-    <tr>
-      <th></th>
-      <th></th>
-      <th></th>
-    </tr>
-  </thead>
-
-  <tbody>
+<div class="panel panel-default">
+  <div class="panel-heading">
+    <div class="row">
+      <div class="col-md-9">
+        <h4 class="panel-title">Subjects</h4>
+      </div>
+    </div>
+  </div>
+  <ul class="list-group">
     <% @subjects.each do |subject| %>
-      <tr>
-        <td><%= link_to 'Show', subject %></td>
-        <td><%= link_to 'Edit', edit_subject_path(subject) %></td>
-        <td><%= link_to 'Destroy', subject, method: :delete, data: { confirm: 'Are you sure?' } %></td>
-      </tr>
+      <li class="list-group-item">
+        <%= link_to subject do %>
+          <%= subject.abbr %>
+        <% end %>
+      </li>
     <% end %>
-  </tbody>
-</table>
-
-<br>
-
-<%= link_to 'New Subject', new_subject_path %>
+  </ul>
+</div>

@@ -1,7 +1,7 @@
 <div class="row">
   <div class="col-md-8">
     <h2>
-      <%= @subject.name %>
+      <%= @subject.abbr %>
     </h2>
   </div>
   <div class="col-md-4 text-right">
@@ -15,28 +15,23 @@
   <div class="panel-heading">
     <div class="row">
       <div class="col-md-8">
-        <h3 class="panel-title">StudyPads</h3>
-      </div>
-      <div class="col-md-4 text-right">
-        <%= link_to new_etherpad_path, class: "btn btn-primary btn-xs" do %>
-          <div style="color:white"><i class="fa fa-pencil-square-o"></i> New StudyPad</div>
-        <% end %>
+        <h3 class="panel-title">Courses in <%= @subject.abbr %></h3>
       </div>
     </div>
   </div>
 
   <ul class="list-group">
-    <% @subjects.etherpad.each do |etherpad| %>
+    <% @subject.groups.each do |group| %>
       <li class="list-group-item">
-          <%= link_to etherpad do %>
-            <%= etherpad.name %>
+          <%= link_to group do %>
+            <%= group.name %>
           <% end %>
       </li>
     <% end %>
   </ul>
-  <% if @group.etherpads.empty? %>
+  <% if @subject.groups.empty? %>
     <div class="panel-body">
-      There are no StudyPads to display for this course.
+      There are no courses for this subject.
     </div>
 <% end %>
 </div>
