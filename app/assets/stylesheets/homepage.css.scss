@@ -16,7 +16,7 @@ html, body {
 }
 
 #homepage-navbar .navbar-nav li {
-	font-size: 22px;
+	font-size: 17px;
   color: white;
 }
 
@@ -28,25 +28,25 @@ html, body {
 
 #homepage-body body { 
 	padding-top: 92px;
+  margin:0;
 }
 
 #homepage-body .what-bg {
-  position:absolute;
-  width: 100%;
-	height: 100%;
-  background-image: url("/assets/library6.jpg");
-  background-position: 0 center;
-  background-size: cover;
-  left:0px;
-  bottom:0px;
-  z-index: 1;
+ position: absolute;
+ width:100%;
+ height:100%;
+ background-image: url('/assets/library6.jpg');
+ background-size: cover;
+ left:0;
+ z-index: 1;
 }
 
 #homepage-body .what-box{
-  position: absolute;
-  left: 0;
-  right: 0;
-  background: rgba(239,239,239,0.65);
+  margin-top: 200px;
+  position:absolute;
+  left:0;
+  right:0;
+  background-color:rgba(239,239,239,0.65);
   z-index: 2;
 }
 
@@ -68,7 +68,13 @@ html, body {
 	color: #3d3d3d;
 }
 
+#homepage-body .content {
+  position: absolute;
+  width: 100%;
+  top: 100%;
+  height: 100px;
+}
+
 #why, #how, #who, #about {
   height: 800px;
 }
-
