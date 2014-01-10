@@ -3,12 +3,15 @@ Studypool::Application.routes.draw do
   get 'dashboard' => 'pages#dashboard'
   devise_for :users
   resources :etherpads, path: 'studypads'
-  resources :groups, path: 'courses' do
-      # allows 'apply' button to add current user to a class
-      get 'apply', on: :member
-      get 'remove', on: :member
+  
+  resources :subjects do
+    resources :groups, path: 'courses' do
+        # allows 'apply' button to add current user to a class
+        get 'apply', on: :member
+        get 'remove', on: :member
+    end
   end
-  # user_root_path "pages#dashboard"
+
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 
