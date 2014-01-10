@@ -66,8 +66,7 @@ task :load_courses => :environment do
 		number_name = line.split(' - ')
 
 		subject_id = Subject.find_by_abbr((number_name[0].split(' '))[0])
-		puts subject_id
-
-		puts 'no subject', number_name[0] if subject_id == nil
+		number = (number_name[0].split(' '))[1]
+		name = number_name[1]
 	end	
 end

@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20140106184925) do
+ActiveRecord::Schema.define(version: 20140110021438) do
 
   create_table "etherpads", force: true do |t|
     t.datetime "created_at"
@@ -27,6 +27,7 @@ ActiveRecord::Schema.define(version: 20140106184925) do
     t.datetime "updated_at"
     t.string   "name"
     t.integer  "subject_id"
+    t.string   "number"
   end
 
   add_index "groups", ["subject_id"], name: "index_groups_on_subject_id"
