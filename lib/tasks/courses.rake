@@ -49,7 +49,7 @@ end
 
 
 
-desc 'destroy all subjects currently loaded in the db'
+desc 'destroy all subjects currently loaded in the db - for initial dev only'
 task :clear_subjects => :environment do
 	for subject in Subject.all
 		subject.destroy
@@ -68,5 +68,7 @@ task :load_courses => :environment do
 		subject_id = Subject.find_by_abbr((number_name[0].split(' '))[0])
 		number = (number_name[0].split(' '))[1]
 		name = number_name[1]
+
+		Group.create name: name, subject_id: subject_id, number: number
 	end	
 end
