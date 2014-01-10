@@ -19,7 +19,7 @@
 </div>
 
 <script type="text/javascript">
-	var padname = "<%= @etherpad.group.subject.abbr + @etherpad.group.number + ' - ' + @etherpad.name %>";
+	var padname = "<%= @etherpad.group.subject.abbr + @etherpad.group.number + ' - ' + @etherpad.name + 'sp2014'%>";
 	var currentusername = "<%= current_user.name if current_user %>"
 	$('#examplePadBasic').pad({'padId': padname, 'userName': currentusername}); // sets the pad id and puts the pad in the div
 </script>
