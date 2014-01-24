@@ -12,7 +12,7 @@
 * ~~Create rake tasks to automatically load all of Purdue's subjects and courses~~
 * ~~Adjust Courses navigation to be based on subject~~
 * How-to-use instructions upon sign up
-* Think of a better name
+* ~~Think of a better name~~
 * Finish homepage
 
 ##### Low Priority #####
