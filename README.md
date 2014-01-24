@@ -6,7 +6,7 @@
 
 ##### High Priority #####
 * Change default Etherpad text to show StudyPad instructions (how to use Table of Contents/header system, how to upload images)
-* Add footer
+* ~~Add footer~~
 * Set Etherpad to have automatic height
 * ~~Set up Subject-Course association~~
 * ~~Create rake tasks to automatically load all of Purdue's subjects and courses~~
