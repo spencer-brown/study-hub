@@ -1,23 +1,25 @@
 <h1>Courses</h1>
 <p class="lead">Click on a subject to browse its courses.</p>
 
-<div class="panel panel-default">
-  <div class="panel-heading">
-    <div class="row">
-      <div class="col-md-9">
-        <h4 class="panel-title">Subjects</h4>
+<%= alphabetical_paginate @alphaParams %>
+
+<div class="pagination_table">
+  <div class="panel panel-default">
+    <div class="panel-heading">
+      <div class="row">
+        <div class="col-md-9">
+          <h4 class="panel-title">Subjects</h4>
+        </div>
       </div>
     </div>
+    <ul class="list-group">
+      <% @subjects.each do |subject| %>
+        <li class="list-group-item">
+          <%= link_to subject do %>
+            <%= subject.abbr %>
+          <% end %>
+        </li>
+      <% end %>
+    </ul>
   </div>
-  <ul class="list-group">
-    <% @subjects.each do |subject| %>
-      <li class="list-group-item">
-        <%= link_to subject do %>
-          <%= subject.abbr %>
-        <% end %>
-      </li>
-    <% end %>
-  </ul>
 </div>
-
-<%= will_paginate @subjects, renderer: BootstrapPagination::Rails %>
