@@ -15,6 +15,7 @@ gem "font-awesome-sass", "~> 4.0.2"
 gem "will_paginate", "~> 3.0.5"
 gem "will_paginate-bootstrap", "~> 1.0.0"
 gem "alphabetical_paginate", "~> 2.1.0"
+gem "turbolinks", "~> 2.2.0"
 
 group :development, :test do
 	gem 'sqlite3'

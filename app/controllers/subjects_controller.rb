@@ -5,7 +5,7 @@ class SubjectsController < ApplicationController
   # GET /subjects.json
   def index
     # @subjects = Subject.all.order("abbr ASC").paginate(:page => params[:page])
-    @subjects, @alphaParams = Subject.all.alpha_paginate(params[:letter], {bootstrap3: true}){|subject| subject.abbr}
+    @subjects = Subject.paginate(:page => params[:page])
   end
 
   # GET /subjects/1

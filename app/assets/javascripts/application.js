@@ -14,4 +14,5 @@
 //= require jquery_ujs
 //= require etherpad
 //= require bootstrap
+//= require turbolinks
 //= require_tree .

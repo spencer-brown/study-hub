@@ -1,7 +1,9 @@
 <h1>Courses</h1>
 <p class="lead">Click on a subject to browse its courses.</p>
 
-<div class="center"><%= alphabetical_paginate @alphaParams %></div>
+<div class="text-center">
+  <%= will_paginate @subjects, renderer: BootstrapPagination::Rails %>
+</div>
 
 <div class="pagination_table">
   <div class="panel panel-default">

@@ -21,3 +21,4 @@
 * Change StudyPad route to show its name instead of its ID
 * General refactoring
 * When generating subjects, add names when available
+* Send to app when hitting homepage and logged in
