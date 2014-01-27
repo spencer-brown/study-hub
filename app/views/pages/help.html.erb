@@ -8,12 +8,14 @@
   </div>
   <div class="list-group">
 		<div class="list-group-item">
-  		<h4 class="list-group-item-heading">Getting Started</h4>
-  		<p class="list-group-item-text"><%= link_to 'An introductory guide to Study Hub', getting_started_path %></p>
+  		<h4 class="list-group-item-heading"><%= link_to 'Getting Started', getting_started_path %></h4>
+  		<p class="list-group-item-text">An introductory guide to Study Hub</p>
 		</div>  		
 		<div class="list-group-item">
-  		<h4 class="list-group-item-heading">How to Use StudyPads</h4>
-  		<p class="list-group-item-text"><%= link_to 'A guide to the different features available in StudyPads', howto_path %></p>
+  		<h4 class="list-group-item-heading"><%= link_to 'How to Use StudyPads', howto_path %></h4>
+  		<p class="list-group-item-text">A guide to the different features available in StudyPads</p>
 		</div>  		
   </div>
 </div>
+
+<h5>If you have any questions that aren't addressed in the above links, please <%= mail_to 'studyhubsx@gmail.com', 'email us.' %></h5>
