@@ -1,14 +1,14 @@
-# StudyPool #
+# Study Hub #
 
 ### A Rails app that allows Purdue students to collaborate on study guides (known as StudyPads) in real-time using Etherpad-Lite. ###
 
 #### To-do: ####
 
 ##### High Priority #####
-* Change default Etherpad text to show StudyPad instructions (how to use Table of Contents/header system, how to upload images)
 * Finish homepage
 * How-to-use instructions upon sign up
 * Set Etherpad to have automatic height
+* ~~Change default Etherpad text to show StudyPad instructions (how to use Table of Contents/header system, how to upload images)~~
 * ~~Add footer~~
 * ~~Set up Subject-Course association~~
 * ~~Create rake tasks to automatically load all of Purdue's subjects and courses~~
