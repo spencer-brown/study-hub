@@ -1,11 +1,11 @@
 <div class="row">
-  <div class="col-md-8">
-    <h2>
-      <%= @subject.abbr %>
-    </h2>
+  <div class="col-md-10">
+    <div class="page-header2">
+      <h2><%= @subject.abbr %></h2>
+    </div>
     <p class="lead">Click on a course to view its StudyPads and add or remove it from your dashboard.</p>
   </div>
-  <div class="col-md-4 text-right">
+  <div class="col-md-2 text-right">
       <%= link_to subjects_path, class: "btn btn-default" do %>
         <i class="fa fa-arrow-left"></i> Subjects
       <% end %>

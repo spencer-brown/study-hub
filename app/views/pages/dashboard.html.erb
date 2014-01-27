@@ -1,5 +1,7 @@
 <% if user_signed_in? %>
-	<h1>My Dashboard</h1>
+	<div class="page-header2">
+		<h1>Dashboard</h1>
+	</div>
 	<% if current_user.groups.empty? %>
 		<%= link_to subjects_path do %>
 			<p class="lead">It looks like you haven't added any courses yet. Click here to go to the Courses page, where you can add your courses.</p>

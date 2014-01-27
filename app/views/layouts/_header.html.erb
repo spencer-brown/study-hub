@@ -37,6 +37,12 @@
             <%= link_to edit_user_registration_path do %>
               <i class="fa fa-user"></i> Account
             <% end %>
+          </li>          
+
+          <li class="<%= 'active' if current_page?(help_path) %>">
+            <%= link_to help_path do %>
+              <i class="fa fa-comment-o"></i> Help
+            <% end %>
           </li>
           
           <li class="<%= 'active' if current_page?(destroy_user_session_path) %>">

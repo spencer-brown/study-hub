@@ -43,7 +43,6 @@ html, body {
 }
 
 #main {
-  // overflow:auto;
   padding-bottom:150px; /* this needs to be bigger than footer height*/
 }
 
@@ -61,3 +60,8 @@ html, body {
   color: #6B6B6B;
 }
 
+.page-header2 {
+  padding-bottom: 9px;
+  margin: 40px 0 20px;
+  border-bottom: 1px solid #95a5a6;
+} 

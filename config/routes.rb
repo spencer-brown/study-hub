@@ -3,6 +3,7 @@ Studypool::Application.routes.draw do
   get 'dashboard' => 'pages#dashboard'
   get 'howto' => 'pages#howto'
   get 'getting_started' => 'pages#getting_started'
+  get 'help' => 'pages#help'
   devise_for :users
   resources :etherpads, path: 'studypads'
   resources :subjects
