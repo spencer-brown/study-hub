@@ -87,7 +87,7 @@ Studypool::Application.configure do
     domain: "gmail.com",
     authentication: "plain",
     enable_starttls_auto: true,
-    user_name: "studypoolemail",
-    password: "opensourcestudy"
+    user_name: ENV['MAILERUSERNAME'],
+    password: ENV['MAILERPASS']
     }
 end

@@ -9,4 +9,7 @@ class PagesController < ApplicationController
 
   def howto
   end
+
+  def getting_started
+  end
 end

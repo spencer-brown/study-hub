@@ -20,8 +20,11 @@ etherpad-lite/var/*
 Ideas.txt
 APIKEY.txt
 
-#psds
+# Ignore psds
 /assets/images/*.psd
 
-# name ideas
+# Ignore name ideas
 'name ideas.txt'
+
+# Ignore local env variables
+/config/env.rb
