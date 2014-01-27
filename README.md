@@ -7,7 +7,6 @@
 ##### High Priority #####
 * Finish homepage
 * How-to-use instructions upon sign up
-* Set Etherpad to have automatic height
 * ~~Change default Etherpad text to show StudyPad instructions (how to use Table of Contents/header system, how to upload images)~~
 * ~~Add footer~~
 * ~~Set up Subject-Course association~~
@@ -16,6 +15,7 @@
 * ~~Think of a better name~~
 
 ##### Low Priority #####
+* Set Etherpad to have automatic height
 * Scrape Purdue directory to generate students' names automatically when they sign up with their Purdue email
 * Image resizing in Etherpads
 * Change StudyPad route to show its name instead of its ID
