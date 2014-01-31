@@ -14,28 +14,19 @@
     <!-- Collect the nav links, forms, and other content for toggling -->
     <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
       <ul class="nav navbar-nav navbar-right">
-      	<li><a href="#what">What</a></li>
-      	<li><a href="#why">Why</a></li>
-    		<li><a href="#how">How</a></li>
-      	<li><a href="#who">Who</a></li>
-    		<li><a href="#about">About</a></li>
-        <li>
-          <%= link_to new_user_session_path do %>
-            Sign In
-          <% end %>
-        </li>
-        <li>
-          <%= link_to new_user_registration_path do %>
-            Sign Up
-          <% end %>
-        </li>
+      	<li><a href="#create">Create</a></li>
+      	<li><a href="#collaborate">Collaborate</a></li>
+    		<li><a href="#dominate">Dominate</a></li>
+        <li><%= link_to 'Sign In', new_user_session_path if !current_user %></li>
+        <li><%= link_to 'Sign Up', new_user_registration_path if !current_user %></li>
+        <li><%= link_to 'My Dashboard', dashboard_path if current_user %></li>
       </ul>
     </div><!-- /.navbar-collapse -->
   </div><!-- container -->
 </nav>
 
 <div class="content" id="homepage-body">
-	<div id="what">
+	<div id="">
 		<div class="what-box">
 			<div class="container">
 				<div class="what-text">
@@ -73,15 +64,15 @@
       </div>
   	</div>
 
-  	<div id="how">
+  	<div id="create">
   		How
   	</div>
   	
-  	<div id="who">
+  	<div id="collaborate">
   		Who
   	</div>
   	
-  	<div id="about">
+  	<div id="dominate">
   		About
   	</div>
   </div>
