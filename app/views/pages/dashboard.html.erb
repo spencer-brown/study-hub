@@ -3,9 +3,8 @@
 		<h1>Dashboard</h1>
 	</div>
 	<% if current_user.groups.empty? %>
-		<%= link_to subjects_path do %>
-			<p class="lead">It looks like you haven't added any courses yet. <%= link_to 'Head over to the Getting Started page to learn how to start using Study Hub!', getting_started_path %></p>
-		<% end %>
+		<p class="lead">It looks like you haven't added any courses yet.<br>
+		<%= link_to 'Head over to the Getting Started page to learn how to start using Study Hub!', getting_started_path %></p>
 	<% end %>
 	<% current_user.groups.each do |group| %>
 		<div class="panel panel-default">
