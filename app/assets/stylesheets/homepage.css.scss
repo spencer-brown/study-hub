@@ -35,6 +35,10 @@ html, body {
   // margin:0;
 }
 
+#homepage-body .row {
+  margin: 0;
+}
+
 /* -- Flash -- */
 #homepage-body i {
   font-size: 10em;
@@ -89,6 +93,8 @@ html, body {
   top: 100%;
   width:100%;
   right: 0;
+  left: 0;
+  margin: 0;
 }
 
 #create, #collaborate, #dominate {
