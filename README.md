@@ -6,7 +6,7 @@
 
 ##### High Priority #####
 * Finish homepage
-* How-to-use instructions upon sign up
+* ~~How-to-use instructions upon sign up~~
 * ~~Change default Etherpad text to show StudyPad instructions (how to use Table of Contents/header system, how to upload images)~~
 * ~~Add footer~~
 * ~~Set up Subject-Course association~~
