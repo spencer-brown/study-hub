@@ -19,6 +19,6 @@
 		</div>
 	</div>
 
-	<%= render 'layouts/footer' %>
+	<%= render 'layouts/footer' unless current_page?(root_path) %>
 </body>
 </html>

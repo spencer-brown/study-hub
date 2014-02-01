@@ -1,5 +1,6 @@
 html, body {
   height: 100%;
+  background-color: rgb(242,244,246);
 }
 
 /* ===== Navbar ===== */
@@ -24,6 +25,9 @@ html, body {
   color: white !important;
 }
 
+
+
+
 /* ===== Body ===== */
 
 #homepage-body body { 
@@ -32,7 +36,9 @@ html, body {
 }
 
 /* -- Flash -- */
-
+#homepage-body i {
+  font-size: 10em;
+}
 #homepage-body .flash-bg {
  position: absolute;
  width:100%;
@@ -57,19 +63,26 @@ html, body {
 	text-align: left;
 	position: relative;
 	height: 100%;
+  font-size: 30px;
+  color: #3d3d3d;
 }
 
 #homepage-body .flash-text h1 {
 	font-size: 60px;
 	font-weight: normal;
-	color: #3d3d3d;
 }
 
 #homepage-body .flash-text p {
-	font-size: 30px;
 	font-weight: normal;
-	color: #3d3d3d;
 }
+
+#homepage-body .flash-text .btn-primary {
+  font-size: 30px;
+}
+
+
+
+/* Content */
 
 #homepage-body .content {
   position: absolute;
@@ -80,21 +93,42 @@ html, body {
 
 #create, #collaborate, #dominate {
   height: 600px;
-  padding-top: 250px;
+  padding-top: 150px; // is this the best way to do this?
 }
 
 
-
-
 /* -- Create -- */
+#create {
+  color: rgb(136,136,136);
+  background-color: rgb(242,244,246);
+}
+
+#create .lead {
+  color: rgb(51,51,51);
+}
+
 #create .row {
   margin: 0;
 }
 
 
+/* -- Collaborate -- */
+#collaborate {
+  background-color: rgb(222,77,62);
+  color: white;
+}
+
+#collaborate .lead {
+  color: rgb(121,59,50);
+}
 
 
 /* -- Dominate -- */
 #dominate {
-  height: 800px;
+  color: rgb(136,136,136);
+  background-color: rgb(242,244,246);
+}
+
+#dominate .lead {
+  color: rgb(51,51,51);
 }
