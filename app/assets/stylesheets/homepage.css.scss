@@ -28,7 +28,7 @@ html, body {
 
 #homepage-body body { 
 	padding-top: 92px;
-  margin:0;
+  // margin:0;
 }
 
 #homepage-body .flash-bg {
@@ -72,8 +72,14 @@ html, body {
 #homepage-body .content {
   position: absolute;
   top: 100%;
+  width:100%;
+  right: 0;
 }
 
 #create, #collaborate, #dominate {
   height: 800px;
+}
+
+#create .row {
+  margin: 0;
 }
