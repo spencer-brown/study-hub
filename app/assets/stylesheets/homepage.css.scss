@@ -44,14 +44,13 @@ html, body {
   font-size: 10em;
 }
 #homepage-body .flash-bg {
- position: absolute;
- width:100%;
- height:100%;
- background-image: url('/assets/library10.jpg');
- background-size: cover;
- left:0;
- z-index: 1;
- border-bottom: 1px solid #3d3d3d;
+  position: absolute;
+  width:100%;
+  height:100%;
+  background-image: url('/assets/library10.jpg');
+  background-size: cover;
+  left:0;
+  z-index: 1;
 }
 
 #homepage-body .flash-box{
@@ -137,4 +136,15 @@ html, body {
 
 #dominate .lead {
   color: rgb(51,51,51);
+}
+
+#homepage-footer {
+  height: 200px;
+  background-color: #3D3D3D;
+  color: #525252;
+}
+
+#homepage-footer .hpf-text {
+  padding-top: 65px;
+  font-size: 17px;
 }

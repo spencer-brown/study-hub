@@ -40,9 +40,9 @@
 						with your peers more easily than ever before.
 					</p>
           <p>
-            <div class="btn btn-primary btn-lg">
-              Get Started Now
-            </div>
+            <%= link_to new_user_registration_path, class: 'btn btn-primary btn-lg' do %>
+              Get started now
+            <% end %>
             or scroll to learn more.
           </p>
 				</div>
@@ -99,5 +99,15 @@
         </div>
       </div>
   	</div>
+
+    <div id="homepage-footer">
+      <div class="container">
+        <div class="hpf-text text-center">
+          Study Hub<br>
+          Created by Spencer Brown, 2014<br>
+          <div class="footer-emphasis">Please submit any feedback <a href="mailto:sbrown2251@gmail.com">here</a></div>
+        </div>
+      </div>
+    </div>
   </div>
 </div>
