@@ -31,6 +31,8 @@ html, body {
   // margin:0;
 }
 
+/* -- Flash -- */
+
 #homepage-body .flash-bg {
  position: absolute;
  width:100%;
@@ -77,9 +79,22 @@ html, body {
 }
 
 #create, #collaborate, #dominate {
-  height: 800px;
+  height: 600px;
+  padding-top: 250px;
 }
 
+
+
+
+/* -- Create -- */
 #create .row {
   margin: 0;
+}
+
+
+
+
+/* -- Dominate -- */
+#dominate {
+  height: 800px;
 }
