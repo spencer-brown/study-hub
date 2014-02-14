@@ -17,7 +17,8 @@
 * ~~Adjust Courses navigation to be based on subject~~
 * ~~Think of a better name~~
 
-##### Low Priority #####
+##### Lower Priority #####
+* Fix mobile view
 * Set Etherpad to have automatic height
 * Scrape Purdue directory to generate students' names automatically when they sign up with their Purdue email
 * Image resizing in Etherpads
