@@ -5,7 +5,10 @@
 #### To-do: ####
 
 ##### High Priority #####
-* Finish homepage
+* Sort courses by CRN
+* Add search for courses
+* Change EPL server host
+* ~~Finish homepage~~
 * ~~How-to-use instructions upon sign up~~
 * ~~Change default Etherpad text to show StudyPad instructions (how to use Table of Contents/header system, how to upload images)~~
 * ~~Add footer~~
