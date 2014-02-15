@@ -3,6 +3,8 @@ class Group < ActiveRecord::Base
   has_many :etherpads
   belongs_to :subject
   
+  searchkick
+
   def groupname
     "#{group.name}"
   end
