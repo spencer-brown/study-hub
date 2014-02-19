@@ -1,5 +1,12 @@
 Studypool::Application.routes.draw do
-  root "pages#home"
+  
+  authenticated :user do
+    root :to => "pages#dashboard", :as => "authenticated_root"
+  end
+
+  root :to => redirect("/home")
+
+  get 'home' => 'pages#home'
   get 'dashboard' => 'pages#dashboard'
   get 'howto' => 'pages#howto'
   get 'getting_started' => 'pages#getting_started'
