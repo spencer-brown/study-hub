@@ -4,7 +4,7 @@ Studypool::Application.routes.draw do
   get 'howto' => 'pages#howto'
   get 'getting_started' => 'pages#getting_started'
   get 'help' => 'pages#help'
-  devise_for :users
+  devise_for :users, :controllers => { :registrations => "registrations" }
   resources :etherpads, path: 'studypads'
   resources :subjects
   resources :groups, path: 'courses' do
