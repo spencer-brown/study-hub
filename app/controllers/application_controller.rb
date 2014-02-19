@@ -19,6 +19,10 @@ class ApplicationController < ActionController::Base
   #    dashboard_path
   #  end
 
+  def after_sign_in_path_for(user)
+    '/dashboard'
+  end
+
 	def configure_permitted_parameters
 	  devise_parameter_sanitizer.for(:sign_up) << :name
 	  devise_parameter_sanitizer.for(:account_update) << :name
