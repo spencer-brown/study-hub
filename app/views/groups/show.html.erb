@@ -13,8 +13,8 @@
     </h2>
   </div>
   <div class="col-md-2 text-right">
-      <%= link_to subjects_path, class: "btn btn-default" do %>
-        <i class="fa fa-arrow-left"></i> Courses
+      <%= link_to subject_path(@group.subject.id), class: "btn btn-default" do %>
+        <i class="fa fa-arrow-left"></i> <%= @group.subject.abbr %>
       <% end %>
   </div>
 </div>
