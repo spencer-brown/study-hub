@@ -12,9 +12,9 @@ Studypool::Application.routes.draw do
   get 'getting_started' => 'pages#getting_started'
   get 'help' => 'pages#help'
   devise_for :users, :controllers => { :registrations => "registrations" }
-  resources :etherpads, path: 'studypads', except: 'index'
-  resources :subjects
-  resources :groups, path: 'courses', except: 'index' do
+  resources :etherpads, path: 'studypads', only: ['show', 'new', 'create']
+  resources :subjects, only: ['index', 'show']
+  resources :groups, path: 'courses', only: 'show' do
     # allows 'apply' button to add current user to a class
     get 'apply', on: :member
     get 'remove', on: :member
